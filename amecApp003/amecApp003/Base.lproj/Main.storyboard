@@ -24,6 +24,9 @@
                                     <constraint firstAttribute="height" constant="88" id="xo9-uw-quF"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_start_splash.png"/>
+                                <connections>
+                                    <segue destination="r0V-ag-VGS" kind="show" id="3cN-kx-aaT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,9 +46,66 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="114.69265367316342"/>
         </scene>
+        <!--Chooselanguage-->
+        <scene sceneID="9YA-P2-NYY">
+            <objects>
+                <viewController id="r0V-ag-VGS" customClass="chooselanguage" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNU-xo-2ph"/>
+                        <viewControllerLayoutGuide type="bottom" id="9so-G6-vvd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3CK-bd-q8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IG-ap-mlC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1Qq-Rc-y8S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-lv-iaA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="lPP-iO-MVF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="ic_background_spinner.png"/>
+                                <connections>
+                                    <action selector="chooselanguageAction:" destination="r0V-ag-VGS" eventType="touchUpInside" id="vaY-NE-Lx2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEj-rU-bim">
+                                <frame key="frameInset" minX="53" minY="196" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TkL-lv-iaA" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" constant="36" id="Dls-XG-BRx"/>
+                            <constraint firstAttribute="trailing" secondItem="9IG-ap-mlC" secondAttribute="trailing" constant="60" id="FwI-3y-876"/>
+                            <constraint firstAttribute="trailing" secondItem="TkL-lv-iaA" secondAttribute="trailing" constant="36" id="MGE-7v-fq4"/>
+                            <constraint firstItem="9IG-ap-mlC" firstAttribute="top" secondItem="uNU-xo-2ph" secondAttribute="bottom" constant="90" id="RxM-wM-DMn"/>
+                            <constraint firstItem="TkL-lv-iaA" firstAttribute="top" secondItem="9IG-ap-mlC" secondAttribute="bottom" constant="58" id="ezh-Pq-XOO"/>
+                            <constraint firstItem="9IG-ap-mlC" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" constant="60" id="nNZ-gd-3Vw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_btnChoose" destination="TkL-lv-iaA" id="WrK-ad-9oc"/>
+                        <outlet property="_lblLanguage" destination="WEj-rU-bim" id="qMs-CQ-qq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-6z-7lj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="114.69265367316342"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background_splash.gif" width="749" height="1331"/>
+        <image name="ic_background_spinner.png" width="1355" height="176"/>
         <image name="ic_start_splash.png" width="551" height="184"/>
     </resources>
 </document>

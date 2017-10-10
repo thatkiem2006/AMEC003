@@ -15,6 +15,8 @@
 		347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB121F8CB2AE008DC894 /* LaunchScreen.storyboard */; };
 		347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB1C1F8CB553008DC894 /* background_splash.gif */; };
 		347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB1E1F8CB64A008DC894 /* ic_start_splash.png */; };
+		347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB211F8CB7A2008DC894 /* chooselanguage.swift */; };
+		347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB231F8CB820008DC894 /* ic_background_spinner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		347DAB151F8CB2AE008DC894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347DAB1C1F8CB553008DC894 /* background_splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background_splash.gif; sourceTree = "<group>"; };
 		347DAB1E1F8CB64A008DC894 /* ic_start_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_start_splash.png; sourceTree = "<group>"; };
+		347DAB211F8CB7A2008DC894 /* chooselanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chooselanguage.swift; sourceTree = "<group>"; };
+		347DAB231F8CB820008DC894 /* ic_background_spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_background_spinner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		347DAB051F8CB2AE008DC894 /* amecApp003 */ = {
 			isa = PBXGroup;
 			children = (
+				347DAB201F8CB789008DC894 /* controller */,
 				347DAB1B1F8CB537008DC894 /* picture */,
 				347DAB061F8CB2AE008DC894 /* AppDelegate.swift */,
 				347DAB081F8CB2AE008DC894 /* ViewController.swift */,
@@ -75,10 +80,19 @@
 		347DAB1B1F8CB537008DC894 /* picture */ = {
 			isa = PBXGroup;
 			children = (
+				347DAB231F8CB820008DC894 /* ic_background_spinner.png */,
 				347DAB1C1F8CB553008DC894 /* background_splash.gif */,
 				347DAB1E1F8CB64A008DC894 /* ic_start_splash.png */,
 			);
 			name = picture;
+			sourceTree = "<group>";
+		};
+		347DAB201F8CB789008DC894 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				347DAB211F8CB7A2008DC894 /* chooselanguage.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +158,7 @@
 				347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */,
 				347DAB111F8CB2AE008DC894 /* Assets.xcassets in Resources */,
 				347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */,
+				347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */,
 				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
 				347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */,
 			);
@@ -156,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
 				347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */,
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
 				347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */,
