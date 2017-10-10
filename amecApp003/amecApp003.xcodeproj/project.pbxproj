@@ -13,6 +13,7 @@
 		347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB0D1F8CB2AE008DC894 /* amecApp003.xcdatamodeld */; };
 		347DAB111F8CB2AE008DC894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB101F8CB2AE008DC894 /* Assets.xcassets */; };
 		347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB121F8CB2AE008DC894 /* LaunchScreen.storyboard */; };
+		347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB1C1F8CB553008DC894 /* background_splash.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		347DAB101F8CB2AE008DC894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347DAB131F8CB2AE008DC894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347DAB151F8CB2AE008DC894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347DAB1C1F8CB553008DC894 /* background_splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background_splash.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		347DAB051F8CB2AE008DC894 /* amecApp003 */ = {
 			isa = PBXGroup;
 			children = (
+				347DAB1B1F8CB537008DC894 /* picture */,
 				347DAB061F8CB2AE008DC894 /* AppDelegate.swift */,
 				347DAB081F8CB2AE008DC894 /* ViewController.swift */,
 				347DAB0A1F8CB2AE008DC894 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				347DAB0D1F8CB2AE008DC894 /* amecApp003.xcdatamodeld */,
 			);
 			path = amecApp003;
+			sourceTree = "<group>";
+		};
+		347DAB1B1F8CB537008DC894 /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				347DAB1C1F8CB553008DC894 /* background_splash.gif */,
+			);
+			name = picture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 				347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */,
 				347DAB111F8CB2AE008DC894 /* Assets.xcassets in Resources */,
 				347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */,
+				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +318,7 @@
 				347DAB1A1F8CB2AE008DC894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
