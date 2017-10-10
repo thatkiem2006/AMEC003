@@ -19,12 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_splash.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2Ms-4A-5hL"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ2-ZB-Jj2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="xo9-uw-quF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="ic_start_splash.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tJ2-ZB-Jj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="68" id="0LU-tn-a6k"/>
                             <constraint firstItem="2Ms-4A-5hL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CJ8-nv-sYi"/>
+                            <constraint firstAttribute="trailing" secondItem="tJ2-ZB-Jj2" secondAttribute="trailing" constant="68" id="TqH-NU-d6G"/>
+                            <constraint firstItem="tJ2-ZB-Jj2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UAY-69-N1X"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Ms-4A-5hL" secondAttribute="bottom" id="ZH3-Kg-ZdF"/>
                             <constraint firstAttribute="trailing" secondItem="2Ms-4A-5hL" secondAttribute="trailing" id="fyT-We-y0X"/>
+                            <constraint firstItem="tJ2-ZB-Jj2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQ7-qt-Isq"/>
                             <constraint firstItem="2Ms-4A-5hL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zr8-IF-5pu"/>
                         </constraints>
                     </view>
@@ -36,5 +46,6 @@
     </scenes>
     <resources>
         <image name="background_splash.gif" width="749" height="1331"/>
+        <image name="ic_start_splash.png" width="551" height="184"/>
     </resources>
 </document>
