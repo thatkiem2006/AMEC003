@@ -25,7 +25,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_start_splash.png"/>
                                 <connections>
-                                    <segue destination="r0V-ag-VGS" kind="show" id="3cN-kx-aaT"/>
+                                    <segue destination="bpx-Bx-2WQ" kind="show" id="3cN-kx-aaT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="114.69265367316342"/>
         </scene>
-        <!--Chooselanguage-->
+        <!--LANGUAGE CHOICE-->
         <scene sceneID="9YA-P2-NYY">
             <objects>
                 <viewController id="r0V-ag-VGS" customClass="chooselanguage" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEj-rU-bim">
-                                <frame key="frameInset" minX="53" minY="196" width="173" height="21"/>
+                                <frame key="frameInset" minX="49" minY="240" width="173" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -93,6 +93,7 @@
                             <constraint firstItem="9IG-ap-mlC" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" constant="60" id="nNZ-gd-3Vw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="LANGUAGE CHOICE" id="L1W-Dp-qTe"/>
                     <connections>
                         <outlet property="_btnChoose" destination="TkL-lv-iaA" id="WrK-ad-9oc"/>
                         <outlet property="_lblLanguage" destination="WEj-rU-bim" id="qMs-CQ-qq0"/>
@@ -100,7 +101,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-6z-7lj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.79999999999995" y="114.69265367316342"/>
+            <point key="canvasLocation" x="889" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Lo-5T-KvT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bpx-Bx-2WQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nwm-4O-42G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r0V-ag-VGS" kind="relationship" relationship="rootViewController" id="3YE-Sc-gYf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgI-7g-m4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-662"/>
         </scene>
     </scenes>
     <resources>
