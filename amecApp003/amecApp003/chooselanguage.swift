@@ -32,7 +32,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         setUpTable()
         
         
-        table.isHidden = true
+        //table.isHidden = true
         
         table.delegate = self
         table.dataSource = self
@@ -45,8 +45,18 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         self._footer.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
         table.separatorStyle = .none
         table.isScrollEnabled = false
+        table.alpha = 0
         //table.frame.size.height = 215
+        
+        let name : String? = UserDefaults.standard.object(forKey: "nameLanguage") as? String
+        if let nameToDisplay = name {
+            _lblLanguage.text = nameToDisplay
+        }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     
@@ -55,8 +65,16 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     
     
+    
+    
+    
+    
     @IBAction func chooselanguageAction(_ sender: AnyObject) {
-        table.isHidden = false
+        //table.isHidden = false
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.table.alpha = 1
+            }, completion: nil)
     }
     
     
@@ -100,7 +118,15 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         let cell : UITableViewCell = tableView.cellForRow(at: indexPath)!
         cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
         
+         UserDefaults.standard.set(languageArray[indexPath.row], forKey: "nameLanguage")
+        
        // table.isHidden = true
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.table.alpha = 0
+            }, completion: nil)
+        
+        
     }
     
     
