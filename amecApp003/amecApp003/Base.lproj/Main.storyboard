@@ -155,20 +155,9 @@
                                     <constraint firstAttribute="height" constant="50" id="IdM-HY-rRK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-Zc-xrz" userLabel="video">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsq-46-TAo" userLabel="btnPlayPause">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="58" id="5q8-si-86E"/>
-                                            <constraint firstAttribute="height" constant="58" id="oP8-Qr-EIG"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="play.png"/>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-Zc-xrz" userLabel="videoView">
                                 <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="tsq-46-TAo" firstAttribute="centerX" secondItem="kDj-Zc-xrz" secondAttribute="centerX" constant="5.5" id="1ck-aF-Twd"/>
-                                    <constraint firstItem="tsq-46-TAo" firstAttribute="centerY" secondItem="kDj-Zc-xrz" secondAttribute="centerY" constant="11.5" id="RNC-N5-IUm"/>
                                     <constraint firstAttribute="height" constant="200" id="cic-RF-Awq"/>
                                 </constraints>
                             </view>
@@ -211,6 +200,9 @@
                             <constraint firstAttribute="trailing" secondItem="Snx-Ak-taB" secondAttribute="trailing" id="xAa-ib-aQd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_viewVideo" destination="kDj-Zc-xrz" id="zX3-B8-kr6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A27-F2-cpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,6 +232,5 @@
         <image name="button_next.png" width="226" height="226"/>
         <image name="ic_background_spinner.png" width="1355" height="176"/>
         <image name="ic_start_splash.png" width="551" height="184"/>
-        <image name="play.png" width="234" height="233"/>
     </resources>
 </document>

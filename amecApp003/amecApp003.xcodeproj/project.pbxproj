@@ -11,6 +11,9 @@
 		34645DB31F8DF212007B0EED /* button_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB21F8DF212007B0EED /* button_next.png */; };
 		34645DB51F8DF25D007B0EED /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB41F8DF25D007B0EED /* pause.png */; };
 		34645DB71F8DF269007B0EED /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB61F8DF269007B0EED /* play.png */; };
+		34645DBB1F8DF4B4007B0EED /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34645DBA1F8DF4B4007B0EED /* AVKit.framework */; };
+		34645DBD1F8DF4BA007B0EED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34645DBC1F8DF4BA007B0EED /* AVFoundation.framework */; };
+		34645DBE1F8DF4CE007B0EED /* NoiNayCoAnh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */; };
 		347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB061F8CB2AE008DC894 /* AppDelegate.swift */; };
 		347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB081F8CB2AE008DC894 /* ViewController.swift */; };
 		347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB0A1F8CB2AE008DC894 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		34645DB21F8DF212007B0EED /* button_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_next.png; sourceTree = "<group>"; };
 		34645DB41F8DF25D007B0EED /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		34645DB61F8DF269007B0EED /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoiNayCoAnh.mp4; sourceTree = "<group>"; };
+		34645DBA1F8DF4B4007B0EED /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		34645DBC1F8DF4BA007B0EED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		347DAB031F8CB2AE008DC894 /* amecApp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amecApp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347DAB061F8CB2AE008DC894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347DAB081F8CB2AE008DC894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34645DBD1F8DF4BA007B0EED /* AVFoundation.framework in Frameworks */,
+				34645DBB1F8DF4B4007B0EED /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34645DB91F8DF4B4007B0EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34645DBC1F8DF4BA007B0EED /* AVFoundation.framework */,
+				34645DBA1F8DF4B4007B0EED /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		347DAAFA1F8CB2AE008DC894 = {
 			isa = PBXGroup;
 			children = (
 				347DAB051F8CB2AE008DC894 /* amecApp003 */,
 				347DAB041F8CB2AE008DC894 /* Products */,
+				34645DB91F8DF4B4007B0EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +99,7 @@
 				347DAB121F8CB2AE008DC894 /* LaunchScreen.storyboard */,
 				347DAB151F8CB2AE008DC894 /* Info.plist */,
 				347DAB0D1F8CB2AE008DC894 /* amecApp003.xcdatamodeld */,
+				34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */,
 			);
 			path = amecApp003;
 			sourceTree = "<group>";
@@ -167,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34645DBE1F8DF4CE007B0EED /* NoiNayCoAnh.mp4 in Resources */,
 				347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */,
 				347DAB111F8CB2AE008DC894 /* Assets.xcassets in Resources */,
 				34645DB71F8DF269007B0EED /* play.png in Resources */,
