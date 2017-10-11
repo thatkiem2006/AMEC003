@@ -93,6 +93,9 @@
                                         <state key="normal" title="&gt;">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="epd-6E-RIo" kind="show" id="zQN-hm-B88"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="114.69265367316342"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutrial1-->
         <scene sceneID="XU7-NT-Y1t">
             <objects>
-                <viewController id="epd-6E-RIo" sceneMemberID="viewController">
+                <viewController id="epd-6E-RIo" customClass="tutrial1" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jmn-LI-FQw"/>
                         <viewControllerLayoutGuide type="bottom" id="9hb-OA-xUK"/>
@@ -146,18 +149,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="shn-zZ-Z3T">
-                                <frame key="frameInset" minX="45" minY="164" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-dj-SWw" userLabel="quangCao">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IdM-HY-rRK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-Zc-xrz" userLabel="video">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsq-46-TAo" userLabel="btnPlayPause">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="5q8-si-86E"/>
+                                            <constraint firstAttribute="height" constant="58" id="oP8-Qr-EIG"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="play.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tsq-46-TAo" firstAttribute="centerX" secondItem="kDj-Zc-xrz" secondAttribute="centerX" constant="5.5" id="1ck-aF-Twd"/>
+                                    <constraint firstItem="tsq-46-TAo" firstAttribute="centerY" secondItem="kDj-Zc-xrz" secondAttribute="centerY" constant="11.5" id="RNC-N5-IUm"/>
+                                    <constraint firstAttribute="height" constant="200" id="cic-RF-Awq"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-Ak-taB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="h9C-LM-F0f"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MF-n1-VLa" userLabel="ButtonNext">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Z1d-NE-LPR"/>
+                                    <constraint firstAttribute="height" constant="46" id="dAZ-pP-MYr"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="button_next.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Te-GN-PHK">
+                                <frame key="frameInset" minY="495" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Read more">
+                                    <color key="titleColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1MF-n1-VLa" secondAttribute="trailing" constant="6" id="CcC-jY-mfB"/>
+                            <constraint firstItem="Ln9-dj-SWw" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" id="HFO-qD-VTe"/>
+                            <constraint firstItem="Ln9-dj-SWw" firstAttribute="top" secondItem="jmn-LI-FQw" secondAttribute="bottom" id="MzU-CF-hz5"/>
+                            <constraint firstItem="kDj-Zc-xrz" firstAttribute="top" secondItem="Ln9-dj-SWw" secondAttribute="bottom" id="Pr7-bj-ejE"/>
+                            <constraint firstItem="Snx-Ak-taB" firstAttribute="top" secondItem="kDj-Zc-xrz" secondAttribute="bottom" id="QrP-He-XRy"/>
+                            <constraint firstAttribute="trailing" secondItem="kDj-Zc-xrz" secondAttribute="trailing" id="Tgm-ED-3XW"/>
+                            <constraint firstItem="Snx-Ak-taB" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" id="dya-QF-xDw"/>
+                            <constraint firstItem="9hb-OA-xUK" firstAttribute="top" secondItem="1MF-n1-VLa" secondAttribute="bottom" constant="6" id="fD3-xu-Zea"/>
+                            <constraint firstAttribute="trailing" secondItem="Ln9-dj-SWw" secondAttribute="trailing" id="gki-kC-LdN"/>
+                            <constraint firstItem="kDj-Zc-xrz" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" id="mfb-7G-MpM"/>
+                            <constraint firstAttribute="trailing" secondItem="Snx-Ak-taB" secondAttribute="trailing" id="xAa-ib-aQd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A27-F2-cpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695" y="90"/>
+            <point key="canvasLocation" x="1661.5999999999999" y="114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Lo-5T-KvT">
@@ -180,7 +237,9 @@
     </scenes>
     <resources>
         <image name="background_splash.gif" width="749" height="1331"/>
+        <image name="button_next.png" width="226" height="226"/>
         <image name="ic_background_spinner.png" width="1355" height="176"/>
         <image name="ic_start_splash.png" width="551" height="184"/>
+        <image name="play.png" width="234" height="233"/>
     </resources>
 </document>
