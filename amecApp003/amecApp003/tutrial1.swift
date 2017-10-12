@@ -9,12 +9,16 @@
 import UIKit
 import AVKit
 import AVFoundation
+import GoogleMobileAds
 
-class tutrial1: UIViewController {
+class tutrial1: UIViewController , GADBannerViewDelegate {
     
     
     @IBOutlet weak var _viewVideo: UIView!
+    @IBOutlet weak var _viewAds: GADBannerView!
+    
     static var _isplay : Bool = false
+    static var _isMute : Bool = false
     var player : AVPlayer! = nil
     let playerController = AVPlayerViewController()
     
@@ -28,8 +32,17 @@ class tutrial1: UIViewController {
     let _btnPlayPause2 : UIButton = {
         let btnPlayPause = UIButton()
        // btnPlayPause.addTarget(self, action: #selector(btnPlayAction), for: .touchUpInside)
+        //btnPlayPause.translatesAutoresizingMaskIntoConstraints = false
         return btnPlayPause
     }()
+    
+    let _btnMute : UIButton = {
+        let btnMute = UIButton()
+      // btnMute.translatesAutoresizingMaskIntoConstraints = false
+        return btnMute
+    }()
+    
+     let progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.bar)
     
     lazy var topView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
     
@@ -41,7 +54,7 @@ class tutrial1: UIViewController {
         
         self.navigationItem.leftBarButtonItem = _barButton;
         
-       
+       setupAds()
        
     }
     
@@ -54,6 +67,7 @@ class tutrial1: UIViewController {
         view.addSubview(playerController.view)
         playerController.view.frame = self._viewVideo.frame
         playerController.showsPlaybackControls = false
+        
        // playerController.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tutrial1.handleTap)))
        
         
@@ -86,18 +100,85 @@ class tutrial1: UIViewController {
         _btnPlayPause2.isHidden = true
         
         
+        //================== add button mute
+        
+      view.addSubview(_btnMute)
+        
+        _btnMute.frame = CGRect(x: self.view.bounds.width - 30, y: _viewVideo.frame.origin.y + _viewVideo.bounds.height - 30, width: 20, height: 20)
+      // _btnMute.backgroundColor = UIColor.red
+        _btnMute.setImage(UIImage(named: "voice_off")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        _btnMute.imageView?.contentMode = UIViewContentMode.scaleToFill
+        _btnMute.addTarget(self, action: #selector(btnMuteAction), for: .touchUpInside)
         
         
+        //============== add progress bar
         
+        view.addSubview(progressView)
+        progressView.frame = CGRect(x:  30, y: _viewVideo.frame.origin.y + _viewVideo.bounds.height - 20, width: self.view.bounds.width - 100 , height: 10)
+        progressView.backgroundColor = UIColor.red
+        
+        print("=======================")
+        print(playerItemDuration())
+       
+        
+        
+       
+        
+//        player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1/30.0, Int32(NSEC_PER_SEC)), queue: nil) { time in
+//            let duration = CMTimeGetSeconds(thePlayerItem.duration)
+//            self.progressView.progress = Float((CMTimeGetSeconds(time) / duration))
+        
+        
+//      var   tg = CMTimeGetSeconds(player.duration);
+//        double time = CMTimeGetSeconds(_player.currentTime);
+//        _progressView.progress = (CGFloat) (time / duration);
+//        
+       
+    }
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func playerItemDuration() -> CMTime
+    {
+        let thePlayerItem : AVPlayerItem = player.currentItem!
+        if (thePlayerItem.status == .readyToPlay)
+        {
+            
+            return thePlayerItem.duration
+        }
+        
+        return(kCMTimeInvalid);
     }
     
     
     
     
-    
-    
-    
-    
+    func btnMuteAction(){
+        
+        tutrial1._isMute = !tutrial1._isMute
+        player.isMuted = !player.isMuted
+        
+        if tutrial1._isMute {
+           
+            _btnMute.setImage(UIImage(named: "voice_on")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else {
+            
+            _btnMute.setImage(UIImage(named: "voice_off")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+    }
     
     
     
@@ -139,4 +220,19 @@ class tutrial1: UIViewController {
         //player.play()
     }
     
+    func setupAds(){
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        
+        // set up ad
+        _viewAds.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        _viewAds.rootViewController = self
+        _viewAds.delegate = self
+        _viewAds.load(request)
+    }
+    
 }
+
+
+
+

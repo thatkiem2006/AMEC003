@@ -149,7 +149,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-dj-SWw" userLabel="quangCao">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-dj-SWw" userLabel="quangCao" customClass="GADBannerView">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IdM-HY-rRK"/>
@@ -201,12 +201,47 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_viewAds" destination="Ln9-dj-SWw" id="WYn-x2-oio"/>
                         <outlet property="_viewVideo" destination="kDj-Zc-xrz" id="zX3-B8-kr6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A27-F2-cpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="114.69265367316342"/>
+        </scene>
+        <!--Test001-->
+        <scene sceneID="M45-Tc-MgT">
+            <objects>
+                <viewController id="vn7-ar-eKG" customClass="test001" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZeI-yB-Jgl"/>
+                        <viewControllerLayoutGuide type="bottom" id="5i9-iA-AhZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qmy-gn-nUx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-5N-P3N" customClass="GADBannerView">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="JTc-z2-2k1"/>
+                                    <constraint firstAttribute="height" constant="50" id="nAT-u0-mV7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FaD-5N-P3N" firstAttribute="leading" secondItem="qmy-gn-nUx" secondAttribute="leading" id="Zil-Cn-JgC"/>
+                            <constraint firstItem="FaD-5N-P3N" firstAttribute="top" secondItem="ZeI-yB-Jgl" secondAttribute="bottom" constant="326" id="lFL-Gk-aTx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myBanner" destination="FaD-5N-P3N" id="ngs-Ue-U5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJ1-TR-IfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Lo-5T-KvT">

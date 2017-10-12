@@ -14,6 +14,8 @@
 		34645DBB1F8DF4B4007B0EED /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34645DBA1F8DF4B4007B0EED /* AVKit.framework */; };
 		34645DBD1F8DF4BA007B0EED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34645DBC1F8DF4BA007B0EED /* AVFoundation.framework */; };
 		34645DBE1F8DF4CE007B0EED /* NoiNayCoAnh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */; };
+		34645DC01F8E1859007B0EED /* voice_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DBF1F8E1859007B0EED /* voice_on.png */; };
+		34645DC21F8E1863007B0EED /* voice_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DC11F8E1863007B0EED /* voice_off.png */; };
 		347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB061F8CB2AE008DC894 /* AppDelegate.swift */; };
 		347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB081F8CB2AE008DC894 /* ViewController.swift */; };
 		347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB0A1F8CB2AE008DC894 /* Main.storyboard */; };
@@ -24,6 +26,9 @@
 		347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB1E1F8CB64A008DC894 /* ic_start_splash.png */; };
 		347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DAB211F8CB7A2008DC894 /* chooselanguage.swift */; };
 		347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB231F8CB820008DC894 /* ic_background_spinner.png */; };
+		349D6ECA1F8F1D4C00414B59 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */; };
+		349D6ECB1F8F1D4C00414B59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 349D6EC91F8F1D4C00414B59 /* GoogleService-Info.plist */; };
+		349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D6ECC1F8F1FA100414B59 /* test001.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,8 @@
 		34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoiNayCoAnh.mp4; sourceTree = "<group>"; };
 		34645DBA1F8DF4B4007B0EED /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		34645DBC1F8DF4BA007B0EED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		34645DBF1F8E1859007B0EED /* voice_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice_on.png; sourceTree = "<group>"; };
+		34645DC11F8E1863007B0EED /* voice_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice_off.png; sourceTree = "<group>"; };
 		347DAB031F8CB2AE008DC894 /* amecApp003.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amecApp003.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347DAB061F8CB2AE008DC894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347DAB081F8CB2AE008DC894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +53,9 @@
 		347DAB1E1F8CB64A008DC894 /* ic_start_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_start_splash.png; sourceTree = "<group>"; };
 		347DAB211F8CB7A2008DC894 /* chooselanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chooselanguage.swift; sourceTree = "<group>"; };
 		347DAB231F8CB820008DC894 /* ic_background_spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_background_spinner.png; sourceTree = "<group>"; };
+		349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		349D6EC91F8F1D4C00414B59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		349D6ECC1F8F1FA100414B59 /* test001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test001.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349D6ECA1F8F1D4C00414B59 /* GoogleMobileAds.framework in Frameworks */,
 				34645DBD1F8DF4BA007B0EED /* AVFoundation.framework in Frameworks */,
 				34645DBB1F8DF4B4007B0EED /* AVKit.framework in Frameworks */,
 			);
@@ -100,6 +111,8 @@
 				347DAB151F8CB2AE008DC894 /* Info.plist */,
 				347DAB0D1F8CB2AE008DC894 /* amecApp003.xcdatamodeld */,
 				34645DB81F8DF4A6007B0EED /* NoiNayCoAnh.mp4 */,
+				349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */,
+				349D6EC91F8F1D4C00414B59 /* GoogleService-Info.plist */,
 			);
 			path = amecApp003;
 			sourceTree = "<group>";
@@ -113,6 +126,8 @@
 				34645DB21F8DF212007B0EED /* button_next.png */,
 				34645DB41F8DF25D007B0EED /* pause.png */,
 				34645DB61F8DF269007B0EED /* play.png */,
+				34645DBF1F8E1859007B0EED /* voice_on.png */,
+				34645DC11F8E1863007B0EED /* voice_off.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -122,6 +137,7 @@
 			children = (
 				347DAB211F8CB7A2008DC894 /* chooselanguage.swift */,
 				34645DB01F8DED1E007B0EED /* tutrial1.swift */,
+				349D6ECC1F8F1FA100414B59 /* test001.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -186,6 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349D6ECB1F8F1D4C00414B59 /* GoogleService-Info.plist in Resources */,
+				34645DC21F8E1863007B0EED /* voice_off.png in Resources */,
+				34645DC01F8E1859007B0EED /* voice_on.png in Resources */,
 				34645DBE1F8DF4CE007B0EED /* NoiNayCoAnh.mp4 in Resources */,
 				347DAB141F8CB2AE008DC894 /* LaunchScreen.storyboard in Resources */,
 				347DAB111F8CB2AE008DC894 /* Assets.xcassets in Resources */,
@@ -209,6 +228,7 @@
 				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
 				347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */,
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
+				349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */,
 				34645DB11F8DED1E007B0EED /* tutrial1.swift in Sources */,
 				347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */,
 			);
@@ -334,6 +354,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VX3NH7X54P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/amecApp003",
+				);
 				INFOPLIST_FILE = amecApp003/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adv.amecApp003;
@@ -347,6 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VX3NH7X54P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/amecApp003",
+				);
 				INFOPLIST_FILE = amecApp003/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adv.amecApp003;
