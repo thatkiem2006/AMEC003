@@ -12,7 +12,13 @@ import GoogleMobileAds
 class test001: UIViewController , GADBannerViewDelegate {
 
     var bannerView: GADBannerView!
+    var time : Timer!
+    var dem : Float = 0
     @IBOutlet weak var myBanner: GADBannerView!
+    @IBOutlet weak var slide: UISlider!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +39,27 @@ class test001: UIViewController , GADBannerViewDelegate {
 //        bannerView.rootViewController = self
 //        bannerView.load(GADRequest())
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        slide.maximumValue = 1
+        slide.minimumValue = 0
+        slide.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        
+        time = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(xuLy), userInfo: nil, repeats: true)
+    }
+    
+    
+    func xuLy(){
+       
+
+    }
+    
+    
+    @IBAction func getValue(_ sender: AnyObject) {
+        print(slide.value)
     }
 
   

@@ -19,6 +19,7 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
     
     static var _isplay : Bool = false
     static var _isMute : Bool = false
+    var timerProgressVideo : Timer!
     var player : AVPlayer! = nil
     let playerController = AVPlayerViewController()
     
@@ -42,11 +43,20 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         return btnMute
     }()
     
-     let progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.bar)
     
+     let progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.bar)
+    let _sileSound = UISlider()
     lazy var topView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
     
 
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          navigationItem.title = "TUTRIAL"
@@ -109,30 +119,42 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         _btnMute.setImage(UIImage(named: "voice_off")?.withRenderingMode(.alwaysOriginal), for: .normal)
         _btnMute.imageView?.contentMode = UIViewContentMode.scaleToFill
         _btnMute.addTarget(self, action: #selector(btnMuteAction), for: .touchUpInside)
+        _btnMute.isHidden = true
         
         
         //============== add progress bar
         
         view.addSubview(progressView)
-        progressView.frame = CGRect(x:  30, y: _viewVideo.frame.origin.y + _viewVideo.bounds.height - 20, width: self.view.bounds.width - 100 , height: 10)
-        progressView.backgroundColor = UIColor.red
+        progressView.frame = CGRect(x:  0, y: _viewVideo.frame.origin.y + _viewVideo.bounds.height , width: self.view.bounds.width, height: 5)
+        //progressView.backgroundColor = UIColor.red
+        progressView.progress = 0
+        progressView.progressTintColor = UIColor.red
+        progressView.trackTintColor = UIColor.lightGray
+        //progressView.isHidden = true
+        
+        timerProgressVideo = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(actionProgreaaVideo), userInfo: nil, repeats: true)
         
         print("=======================")
-        print(playerItemDuration())
-       
-        
         
        
         
-//        player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1/30.0, Int32(NSEC_PER_SEC)), queue: nil) { time in
-//            let duration = CMTimeGetSeconds(thePlayerItem.duration)
-//            self.progressView.progress = Float((CMTimeGetSeconds(time) / duration))
+        //================= add slideSound
         
+        view.addSubview(_sileSound)
+       _sileSound.maximumValue = 1
         
-//      var   tg = CMTimeGetSeconds(player.duration);
-//        double time = CMTimeGetSeconds(_player.currentTime);
-//        _progressView.progress = (CGFloat) (time / duration);
-//        
+        _sileSound.minimumValue = 0
+        _sileSound.value = 1
+        _sileSound.thumbTintColor = UIColor.white
+        _sileSound.minimumTrackTintColor = UIColor.white
+        _sileSound.maximumTrackTintColor = UIColor.gray
+        _sileSound.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        _sileSound.frame = CGRect(x:  self._btnMute.center.x, y: self._btnMute.frame.origin.y - 2*self._sileSound.bounds.height - 2*_btnMute.bounds.height, width: 5 , height: 100)
+        _sileSound.addTarget(self, action: #selector(actionSlideSound), for: .valueChanged)
+        _sileSound.isHidden = true
+        
+
+    
        
     }
     
@@ -151,20 +173,43 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
     
     
     
-    func playerItemDuration() -> CMTime
-    {
-        let thePlayerItem : AVPlayerItem = player.currentItem!
-        if (thePlayerItem.status == .readyToPlay)
-        {
-            
-            return thePlayerItem.duration
-        }
+    
+    
+    
+    
+    @IBAction func actionTest(_ sender: AnyObject) {
         
-        return(kCMTimeInvalid);
+        if (self.player) != nil {
+            let url = Bundle.main.path(forResource: "NoiNayCoAnh", ofType: "mp4")
+            let asset = AVAsset(url: URL(fileURLWithPath: url!))
+            
+            // let duration = asset.duration
+            let duration = asset.duration.seconds
+            let minutes = Double(duration / 60)
+            print(minutes)
+
+        }
+       print(player.currentTime().seconds)
+        
+        player.volume = 0
+        print(player.status)
+        
     }
     
+    func actionProgreaaVideo(){
+        let url = Bundle.main.path(forResource: "NoiNayCoAnh", ofType: "mp4")
+        let asset = AVAsset(url: URL(fileURLWithPath: url!))
+        
+        // let duration = asset.duration
+        let duration = asset.duration.seconds
+        progressView.progress = Float(player.currentTime().seconds)/Float(duration)
+        print(progressView.progress)
+    }
     
-    
+    func actionSlideSound(){
+        player.volume = _sileSound.value
+        print(player.volume)
+    }
     
     func btnMuteAction(){
         
@@ -174,9 +219,11 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         if tutrial1._isMute {
            
             _btnMute.setImage(UIImage(named: "voice_on")?.withRenderingMode(.alwaysOriginal), for: .normal)
+            _sileSound.value = 0
         } else {
             
             _btnMute.setImage(UIImage(named: "voice_off")?.withRenderingMode(.alwaysOriginal), for: .normal)
+            _sileSound.value = player.volume
         }
     }
     
@@ -184,6 +231,12 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
     
     func handleTap() {
         _btnPlayPause2.isHidden = !_btnPlayPause2.isHidden
+        _btnMute.isHidden = !_btnMute.isHidden
+       
+        _sileSound.isHidden = !_sileSound.isHidden
+        
+        
+       // progressView.isHidden = !progressView.isHidden
       // player.play()
         
     }

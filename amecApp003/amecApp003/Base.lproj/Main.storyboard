@@ -176,10 +176,15 @@
                                     <constraint firstAttribute="height" constant="46" id="dAZ-pP-MYr"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="button_next.png"/>
+                                <connections>
+                                    <action selector="actionTest:" destination="epd-6E-RIo" eventType="touchUpInside" id="WZw-XV-9Ka"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Te-GN-PHK">
-                                <frame key="frameInset" minY="495" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Te-GN-PHK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="2qV-Eq-BrN"/>
+                                    <constraint firstAttribute="width" constant="90" id="o8s-zs-NXt"/>
+                                </constraints>
                                 <state key="normal" title="Read more">
                                     <color key="titleColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -187,11 +192,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Te-GN-PHK" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" constant="5" id="7px-Xa-q3L"/>
                             <constraint firstAttribute="trailing" secondItem="1MF-n1-VLa" secondAttribute="trailing" constant="6" id="CcC-jY-mfB"/>
+                            <constraint firstItem="2Te-GN-PHK" firstAttribute="top" secondItem="Snx-Ak-taB" secondAttribute="bottom" constant="2" id="DPd-Lz-2NU"/>
                             <constraint firstItem="Ln9-dj-SWw" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" id="HFO-qD-VTe"/>
                             <constraint firstItem="Ln9-dj-SWw" firstAttribute="top" secondItem="jmn-LI-FQw" secondAttribute="bottom" id="MzU-CF-hz5"/>
                             <constraint firstItem="kDj-Zc-xrz" firstAttribute="top" secondItem="Ln9-dj-SWw" secondAttribute="bottom" id="Pr7-bj-ejE"/>
-                            <constraint firstItem="Snx-Ak-taB" firstAttribute="top" secondItem="kDj-Zc-xrz" secondAttribute="bottom" id="QrP-He-XRy"/>
+                            <constraint firstItem="Snx-Ak-taB" firstAttribute="top" secondItem="kDj-Zc-xrz" secondAttribute="bottom" constant="5" id="QrP-He-XRy"/>
                             <constraint firstAttribute="trailing" secondItem="kDj-Zc-xrz" secondAttribute="trailing" id="Tgm-ED-3XW"/>
                             <constraint firstItem="Snx-Ak-taB" firstAttribute="leading" secondItem="fFK-Cb-WNQ" secondAttribute="leading" id="dya-QF-xDw"/>
                             <constraint firstItem="9hb-OA-xUK" firstAttribute="top" secondItem="1MF-n1-VLa" secondAttribute="bottom" constant="6" id="fD3-xu-Zea"/>
@@ -228,20 +235,42 @@
                                     <constraint firstAttribute="height" constant="50" id="nAT-u0-mV7"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-QS-Bg3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="79Y-kb-ALy"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="1" green="0.80392156859999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="getValue:" destination="vn7-ar-eKG" eventType="valueChanged" id="803-k8-Atn"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-rt-u2g">
+                                <frame key="frameInset" minX="24" minY="450" width="150" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="progressTintColor" red="1" green="0.93435156090000004" blue="0.58511946569999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dug-QS-Bg3" firstAttribute="top" secondItem="ZeI-yB-Jgl" secondAttribute="bottom" constant="159" id="3W4-of-3ED"/>
+                            <constraint firstItem="Dug-QS-Bg3" firstAttribute="leading" secondItem="qmy-gn-nUx" secondAttribute="leading" id="By0-sf-5ek"/>
                             <constraint firstItem="FaD-5N-P3N" firstAttribute="leading" secondItem="qmy-gn-nUx" secondAttribute="leading" id="Zil-Cn-JgC"/>
+                            <constraint firstAttribute="trailing" secondItem="Dug-QS-Bg3" secondAttribute="trailing" id="gyj-jE-23U"/>
                             <constraint firstItem="FaD-5N-P3N" firstAttribute="top" secondItem="ZeI-yB-Jgl" secondAttribute="bottom" constant="326" id="lFL-Gk-aTx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myBanner" destination="FaD-5N-P3N" id="ngs-Ue-U5d"/>
+                        <outlet property="slide" destination="Dug-QS-Bg3" id="sVI-3a-eH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ1-TR-IfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="101"/>
+            <point key="canvasLocation" x="2508" y="100.29985007496252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Lo-5T-KvT">
