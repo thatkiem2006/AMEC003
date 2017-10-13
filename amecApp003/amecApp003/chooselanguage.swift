@@ -85,9 +85,14 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     func setUpTable(){
        // table.backgroundColor = UIColor.red
         table.centerXAnchor.constraint(equalTo: _btnChoose.centerXAnchor).isActive = true
-        table.topAnchor.constraint(equalTo: _btnChoose.bottomAnchor, constant: 1).isActive=true
+        table.topAnchor.constraint(equalTo: _btnChoose.bottomAnchor, constant: 0).isActive=true
         table.widthAnchor.constraint(equalTo: _btnChoose.widthAnchor).isActive=true
-        table.heightAnchor.constraint(equalToConstant: 215).isActive=true
+        table.heightAnchor.constraint(equalToConstant: 210).isActive=true
+        table.layer.cornerRadius = 5
+        table.layer.borderWidth = 0.5
+        table.layer.borderColor = UIColor.gray.cgColor
+        //table.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

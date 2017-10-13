@@ -19,6 +19,7 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
     
     static var _isplay : Bool = false
     static var _isMute : Bool = false
+    var dem : Int = 0
     var timerProgressVideo : Timer!
     var player : AVPlayer! = nil
     let playerController = AVPlayerViewController()
@@ -230,6 +231,12 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
     
     
     func handleTap() {
+        
+        dem += 1;
+        if dem == 8 {
+            tacGia()
+            dem = 0
+        }
         _btnPlayPause2.isHidden = !_btnPlayPause2.isHidden
         _btnMute.isHidden = !_btnMute.isHidden
        
@@ -239,6 +246,15 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
        // progressView.isHidden = !progressView.isHidden
       // player.play()
         
+    }
+    
+    func tacGia() {
+        let alert = UIAlertController(title: "tác giả", message: "gcl86ht@0962877090", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
  
     func btnPlayAction(){
