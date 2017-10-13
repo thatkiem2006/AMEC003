@@ -112,11 +112,14 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _lblLanguage.text = languageArray[indexPath.row]
         
+        
        // UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
        // cell.contentView.backgroundColor = [UIColor yellowColor];
 
         let cell : UITableViewCell = tableView.cellForRow(at: indexPath)!
         cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
+        
+        //cell.textLabel?.textColor = UIColor.white
         
          UserDefaults.standard.set(languageArray[indexPath.row], forKey: "nameLanguage")
         
