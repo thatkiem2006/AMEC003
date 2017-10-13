@@ -13,6 +13,8 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var _btnChoose: UIButton!
     @IBOutlet weak var _footer: UIView!
     
+    static var bien1 : Int = 100
+    
     let table : UITableView = {
         let tab = UITableView()
         tab.translatesAutoresizingMaskIntoConstraints = false
@@ -58,8 +60,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     override func viewDidAppear(_ animated: Bool) {
         
     }
-    
-    
+
     
     
     
@@ -99,27 +100,37 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
-        
         cell.textLabel?.text = languageArray[indexPath.row]
+       
+        if indexPath.row == chooselanguage.bien1 {
+            cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
+        } else {
+            cell.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
+        }
+       
         return cell
+       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 35
     }
     
+    
+  
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _lblLanguage.text = languageArray[indexPath.row]
         
-        
-       // UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-       // cell.contentView.backgroundColor = [UIColor yellowColor];
 
-        let cell : UITableViewCell = tableView.cellForRow(at: indexPath)!
-        cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
+        chooselanguage.bien1 = indexPath.row
         
-        //cell.textLabel?.textColor = UIColor.white
+        table.reloadData()
+        
+        let cell : UITableViewCell = tableView.cellForRow(at: indexPath)!
+      
+        cell.textLabel?.textColor = UIColor.white
+        
         
          UserDefaults.standard.set(languageArray[indexPath.row], forKey: "nameLanguage")
         
