@@ -68,7 +68,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         self._footer.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
         table.separatorStyle = .none
         table.isScrollEnabled = false
-        table.alpha = 1
+        table.alpha = 0
         //table.frame.size.height = 215
         
         //======= add bar button left
@@ -101,7 +101,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         _viewContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         _viewContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: view.bounds.height/3).isActive = true
-        _viewContainer.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
+        _viewContainer.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         _viewContainer.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         _viewContainer.addSubview(_btnChoose)
@@ -132,7 +132,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func setupNavigationBar(){
-        navigationItem.title = "LANGUAGE CHOOISE"
+        navigationItem.title = "LANGUAGE CHOICE"
         navigationController?.navigationBar.titleTextAttributes = [
         NSForegroundColorAttributeName : UIColor.gray,
         NSFontAttributeName : UIFont(name: "Futura", size: 15)!
@@ -171,12 +171,15 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     func actionBtn(){
         print("*************")
-        table.isHidden = false
+        table.isHidden = !table.isHidden
         print("==========")
         
-        UIView.animate(withDuration: 1, animations: {
-            self.table.alpha = 1
-            }, completion: nil)
+        if !table.isHidden {
+            UIView.animate(withDuration: 1, animations: {
+                self.table.alpha = 1
+                }, completion: nil)
+        }
+        
     }
     
     func setupLblLanguage(){
@@ -195,11 +198,14 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = languageArray[indexPath.row]
+        //let cell = UITableViewCell()
+        let cell = Bundle.main.loadNibNamed("cellForTableLanguage", owner: self, options: nil)?.first as! cellForTableLanguage
+        //cell.textLabel?.text = languageArray[indexPath.row]
+        cell._lbl.text = languageArray[indexPath.row]
         
         if indexPath.row == chooselanguage.bien1 {
             cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
+            cell.img.image = UIImage(named: "lesson_done")
         } else {
             cell.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
         }
@@ -223,18 +229,19 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         table.reloadData()
         
-        let cell : UITableViewCell = tableView.cellForRow(at: indexPath)!
+        let cell : cellForTableLanguage = tableView.cellForRow(at: indexPath)! as! cellForTableLanguage
         
-        cell.textLabel?.textColor = UIColor.white
+       // cell.textLabel?.textColor = UIColor.white
+        cell._lbl.textColor = UIColor.white
         
         
         UserDefaults.standard.set(languageArray[indexPath.row], forKey: "nameLanguage")
-        
-        // table.isHidden = true
-        
-        UIView.animate(withDuration: 1, animations: {
-            self.table.alpha = 0
-            }, completion: nil)
+       
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.table.alpha = 0
+//            }) { (true) in
+//                self.table.isHidden = true
+//        }
         
         
     }

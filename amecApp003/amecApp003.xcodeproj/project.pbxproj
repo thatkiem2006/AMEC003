@@ -31,6 +31,9 @@
 		349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D6ECC1F8F1FA100414B59 /* test001.swift */; };
 		34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A49E1F9469CA002791EE /* ic_forward2.png */; };
 		34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A4A01F946D4D002791EE /* ic_forward.png */; };
+		34C9A4A71F94858E002791EE /* cellForTableLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C9A4A51F94858E002791EE /* cellForTableLanguage.swift */; };
+		34C9A4A81F94858E002791EE /* cellForTableLanguage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A4A61F94858E002791EE /* cellForTableLanguage.xib */; };
+		34C9A4AA1F948730002791EE /* lesson_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A4A91F948730002791EE /* lesson_done.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		349D6ECC1F8F1FA100414B59 /* test001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test001.swift; sourceTree = "<group>"; };
 		34C9A49E1F9469CA002791EE /* ic_forward2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_forward2.png; sourceTree = "<group>"; };
 		34C9A4A01F946D4D002791EE /* ic_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_forward.png; sourceTree = "<group>"; };
+		34C9A4A51F94858E002791EE /* cellForTableLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellForTableLanguage.swift; sourceTree = "<group>"; };
+		34C9A4A61F94858E002791EE /* cellForTableLanguage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellForTableLanguage.xib; sourceTree = "<group>"; };
+		34C9A4A91F948730002791EE /* lesson_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lesson_done.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		347DAB051F8CB2AE008DC894 /* amecApp003 */ = {
 			isa = PBXGroup;
 			children = (
+				34C9A4A21F948525002791EE /* modal */,
 				347DAB201F8CB789008DC894 /* controller */,
 				347DAB1B1F8CB537008DC894 /* picture */,
 				347DAB061F8CB2AE008DC894 /* AppDelegate.swift */,
@@ -134,6 +141,7 @@
 				34645DC11F8E1863007B0EED /* voice_off.png */,
 				34C9A49E1F9469CA002791EE /* ic_forward2.png */,
 				34C9A4A01F946D4D002791EE /* ic_forward.png */,
+				34C9A4A91F948730002791EE /* lesson_done.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -146,6 +154,15 @@
 				349D6ECC1F8F1FA100414B59 /* test001.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		34C9A4A21F948525002791EE /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				34C9A4A51F94858E002791EE /* cellForTableLanguage.swift */,
+				34C9A4A61F94858E002791EE /* cellForTableLanguage.xib */,
+			);
+			name = modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +237,11 @@
 				34645DB31F8DF212007B0EED /* button_next.png in Resources */,
 				34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */,
 				347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */,
+				34C9A4A81F94858E002791EE /* cellForTableLanguage.xib in Resources */,
 				34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */,
 				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
 				347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */,
+				34C9A4AA1F948730002791EE /* lesson_done.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
+				34C9A4A71F94858E002791EE /* cellForTableLanguage.swift in Sources */,
 				347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */,
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
 				349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */,
