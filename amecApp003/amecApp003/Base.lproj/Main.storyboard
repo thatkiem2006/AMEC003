@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="114.69265367316342"/>
         </scene>
-        <!--LANGUAGE CHOICE-->
+        <!--Chooselanguage-->
         <scene sceneID="9YA-P2-NYY">
             <objects>
                 <viewController id="r0V-ag-VGS" customClass="chooselanguage" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,39 +58,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IG-ap-mlC">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="1Qq-Rc-y8S"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-lv-iaA">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="lPP-iO-MVF"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="ic_background_spinner.png"/>
-                                <connections>
-                                    <action selector="chooselanguageAction:" destination="r0V-ag-VGS" eventType="touchUpInside" id="vaY-NE-Lx2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEj-rU-bim">
-                                <frame key="frameInset" minX="49" minY="240" width="203" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IG-ap-mlC">
+                                <frame key="frameInset" minX="60" minY="154" width="255" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-lv-iaA">
+                                <frame key="frameInset" minX="49" minY="315" width="303" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="ic_background_spinner.png"/>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-5a-j2P">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0A-L6-FCu">
-                                        <frame key="frameInset" minX="321" minY="12" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0A-L6-FCu">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="GSm-jC-fBs"/>
-                                            <constraint firstAttribute="height" constant="30" id="tR6-Fn-Kkk"/>
+                                            <constraint firstAttribute="height" constant="25" id="IsM-0u-hlq"/>
+                                            <constraint firstAttribute="width" constant="20" id="n1b-EW-Aqb"/>
                                         </constraints>
-                                        <state key="normal" title="&gt;">
+                                        <state key="normal" backgroundImage="ic_forward.png">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -100,37 +87,32 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="e9b-7Z-01a"/>
-                                    <constraint firstItem="N0A-L6-FCu" firstAttribute="centerY" secondItem="AvI-5a-j2P" secondAttribute="centerY" id="jZR-7o-rDe"/>
-                                    <constraint firstItem="N0A-L6-FCu" firstAttribute="leading" secondItem="AvI-5a-j2P" secondAttribute="leading" constant="321" id="xOm-tE-qCf"/>
+                                    <constraint firstAttribute="trailing" secondItem="N0A-L6-FCu" secondAttribute="trailing" constant="20" id="Dpp-Fq-tBh"/>
+                                    <constraint firstAttribute="height" constant="50" id="RwM-SP-SSo"/>
+                                    <constraint firstItem="N0A-L6-FCu" firstAttribute="centerY" secondItem="AvI-5a-j2P" secondAttribute="centerY" id="bIS-fn-c5h"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEj-rU-bim">
+                                <frame key="frameInset" minX="86" minY="322" width="203" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9so-G6-vvd" firstAttribute="top" secondItem="AvI-5a-j2P" secondAttribute="bottom" id="0Vw-YG-u8l"/>
-                            <constraint firstItem="TkL-lv-iaA" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" constant="36" id="Dls-XG-BRx"/>
-                            <constraint firstAttribute="trailing" secondItem="9IG-ap-mlC" secondAttribute="trailing" constant="60" id="FwI-3y-876"/>
-                            <constraint firstAttribute="trailing" secondItem="TkL-lv-iaA" secondAttribute="trailing" constant="36" id="MGE-7v-fq4"/>
-                            <constraint firstAttribute="trailing" secondItem="AvI-5a-j2P" secondAttribute="trailing" id="RPU-9c-Gc9"/>
-                            <constraint firstItem="9IG-ap-mlC" firstAttribute="top" secondItem="uNU-xo-2ph" secondAttribute="bottom" constant="90" id="RxM-wM-DMn"/>
-                            <constraint firstItem="TkL-lv-iaA" firstAttribute="top" secondItem="9IG-ap-mlC" secondAttribute="bottom" constant="58" id="ezh-Pq-XOO"/>
-                            <constraint firstItem="AvI-5a-j2P" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" id="nJK-KF-AvG"/>
-                            <constraint firstItem="9IG-ap-mlC" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" constant="60" id="nNZ-gd-3Vw"/>
+                            <constraint firstItem="AvI-5a-j2P" firstAttribute="leading" secondItem="3CK-bd-q8F" secondAttribute="leading" id="I8s-Mv-KVV"/>
+                            <constraint firstAttribute="trailing" secondItem="AvI-5a-j2P" secondAttribute="trailing" id="M5Y-Pz-PDD"/>
+                            <constraint firstItem="9so-G6-vvd" firstAttribute="top" secondItem="AvI-5a-j2P" secondAttribute="bottom" id="kYK-HI-TNi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LANGUAGE CHOICE" id="L1W-Dp-qTe">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="OqA-Dq-Ltq">
-                            <color key="tintColor" red="0.63809912006845648" green="0.68726183707462785" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="partialCurl" id="Byd-Ob-voe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="L1W-Dp-qTe"/>
                     <connections>
                         <outlet property="_btnChoose" destination="TkL-lv-iaA" id="WrK-ad-9oc"/>
                         <outlet property="_footer" destination="AvI-5a-j2P" id="jhv-Wr-9Bw"/>
                         <outlet property="_lblLanguage" destination="WEj-rU-bim" id="qMs-CQ-qq0"/>
+                        <outlet property="_lblTitle" destination="9IG-ap-mlC" id="JMv-gr-9P7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-6z-7lj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,6 +277,7 @@
         <image name="background_splash.gif" width="749" height="1331"/>
         <image name="button_next.png" width="226" height="226"/>
         <image name="ic_background_spinner.png" width="1355" height="176"/>
+        <image name="ic_forward.png" width="62" height="114"/>
         <image name="ic_start_splash.png" width="551" height="184"/>
     </resources>
 </document>

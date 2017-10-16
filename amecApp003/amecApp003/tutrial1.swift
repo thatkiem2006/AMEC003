@@ -69,7 +69,17 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
        
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        barBtnLeft()
+        setupNavigationBar()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         playVideo()
@@ -228,7 +238,26 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         }
     }
     
+    func  barBtnLeft(){
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage(named: "ic_forward2"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(fbButtonPressed), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 10, height: 20)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
     
+    func setupNavigationBar(){
+        navigationItem.title = "TUTRIAL"
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.gray,
+            NSFontAttributeName : UIFont(name: "Futura", size: 15)!
+        ]
+    }
+    
+    func fbButtonPressed(){
+        navigationController?.popViewController(animated: true)
+    }
     
     func handleTap() {
         

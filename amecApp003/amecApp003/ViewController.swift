@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
  
 

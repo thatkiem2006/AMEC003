@@ -29,6 +29,8 @@
 		349D6ECA1F8F1D4C00414B59 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */; };
 		349D6ECB1F8F1D4C00414B59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 349D6EC91F8F1D4C00414B59 /* GoogleService-Info.plist */; };
 		349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D6ECC1F8F1FA100414B59 /* test001.swift */; };
+		34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A49E1F9469CA002791EE /* ic_forward2.png */; };
+		34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C9A4A01F946D4D002791EE /* ic_forward.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		349D6EC91F8F1D4C00414B59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		349D6ECC1F8F1FA100414B59 /* test001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test001.swift; sourceTree = "<group>"; };
+		34C9A49E1F9469CA002791EE /* ic_forward2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_forward2.png; sourceTree = "<group>"; };
+		34C9A4A01F946D4D002791EE /* ic_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_forward.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				34645DB61F8DF269007B0EED /* play.png */,
 				34645DBF1F8E1859007B0EED /* voice_on.png */,
 				34645DC11F8E1863007B0EED /* voice_off.png */,
+				34C9A49E1F9469CA002791EE /* ic_forward2.png */,
+				34C9A4A01F946D4D002791EE /* ic_forward.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -175,7 +181,7 @@
 					347DAB021F8CB2AE008DC894 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = VX3NH7X54P;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -212,7 +218,9 @@
 				34645DB51F8DF25D007B0EED /* pause.png in Resources */,
 				347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */,
 				34645DB31F8DF212007B0EED /* button_next.png in Resources */,
+				34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */,
 				347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */,
+				34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */,
 				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
 				347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */,
 			);
@@ -353,15 +361,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = VX3NH7X54P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/amecApp003",
 				);
 				INFOPLIST_FILE = amecApp003/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adv.amecApp003;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f9a361a5-a639-4029-ac3b-c07f494d2c9f";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -370,15 +382,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = VX3NH7X54P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/amecApp003",
 				);
 				INFOPLIST_FILE = amecApp003/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adv.amecApp003;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f9a361a5-a639-4029-ac3b-c07f494d2c9f";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
