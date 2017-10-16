@@ -12,6 +12,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var _btnChoose: UIButton!
     @IBOutlet weak var _footer: UIView!
+    @IBOutlet weak var _btnNext: UIButton!
     
     static var bien1 : Int = 100
     
@@ -53,6 +54,10 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         table.isHidden = true
         
+        
+        
+        
+        
         table.delegate = self
         table.dataSource = self
         
@@ -70,6 +75,11 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         table.isScrollEnabled = false
         table.alpha = 0
         //table.frame.size.height = 215
+        
+        
+        // chieu cao navigation bar
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
+        navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xF8F8F8, a: 1)
         
         //======= add bar button left
             barBtnLeft()
@@ -90,6 +100,10 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         
+        // chieu cao navigation bar
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
+        navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xF8F8F8, a: 1)
+
         
     }
     
@@ -100,9 +114,9 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     func setupForViewContainer(){
         
         _viewContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        _viewContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: view.bounds.height/3).isActive = true
+        _viewContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: (150/442)*view.bounds.height).isActive = true
         _viewContainer.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        _viewContainer.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        _viewContainer.heightAnchor.constraint(equalToConstant: (28/442)*view.bounds.height).isActive = true
         
         _viewContainer.addSubview(_btnChoose)
         _viewContainer.addSubview(_lblLanguage)
@@ -118,7 +132,19 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func setupFooter(){
+        _footer.translatesAutoresizingMaskIntoConstraints = false
+        _footer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        _footer.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        _footer.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        _footer.heightAnchor.constraint(equalToConstant: (33/442)*view.bounds.height).isActive = true
         _footer.backgroundColor  = UIColor(rgb: 0xDDE2E6, a: 1)
+        
+        _btnNext.translatesAutoresizingMaskIntoConstraints = false
+        _footer.addSubview(_btnNext)
+        _btnNext.centerYAnchor.constraint(equalTo: _footer.centerYAnchor).isActive = true
+        _btnNext.rightAnchor.constraint(equalTo: _footer.rightAnchor, constant: -10).isActive = true
+        _btnNext.widthAnchor.constraint(equalToConstant: _footer.bounds.height/5).isActive = true
+        _btnNext.heightAnchor.constraint(equalToConstant: _footer.bounds.height/3).isActive = true
     }
     
     
@@ -137,6 +163,9 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         NSForegroundColorAttributeName : UIColor.gray,
         NSFontAttributeName : UIFont(name: "Futura", size: 15)!
         ]
+        
+        
+        
     }
     
     func fbButtonPressed(){
@@ -146,7 +175,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
     func setupLblTitle(){
         _lblTitle.translatesAutoresizingMaskIntoConstraints = false
         _lblTitle.centerXAnchor.constraint(equalTo: _viewContainer.centerXAnchor).isActive = true
-        _lblTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: view.bounds.height/5).isActive = true
+        _lblTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: (107/442)*view.bounds.height).isActive = true
     }
     
     func setUpTable(){
@@ -205,7 +234,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         if indexPath.row == chooselanguage.bien1 {
             cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
-            cell.img.image = UIImage(named: "lesson_done")
+            cell.img.image = UIImage(named: "selected")
         } else {
             cell.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
         }
@@ -243,6 +272,7 @@ class chooselanguage: UIViewController , UITableViewDelegate, UITableViewDataSou
 //                self.table.isHidden = true
 //        }
         
+        self.table.isHidden = true
         
     }
     
