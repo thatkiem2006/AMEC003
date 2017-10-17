@@ -18,8 +18,10 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
     @IBOutlet weak var _viewVideo2: UIView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var _viewForQuestion: UIView!
+    @IBOutlet weak var _btnAnswer: UIButton!
     
     static var bien1 : Int = 100
+    var questionArray : [String] = ["That is a car.","That is a motorcycle."]
     
     
     override func viewDidLoad() {
@@ -37,6 +39,7 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
         setupViewVideo()
         setUpTable()
         setupForViewQuestion()
+        setupForBtnAnswer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -99,11 +102,7 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
         _viewVideo2.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         _viewVideo2.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         _viewVideo2.heightAnchor.constraint(equalToConstant: (270/646)*view.frame.size.height).isActive = true
-        
-        
-        // add components
-        
-       // addComponents()
+     
     }
     
     
@@ -124,9 +123,21 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
         view.addSubview(table)
         table.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         table.topAnchor.constraint(equalTo: _viewForQuestion.bottomAnchor, constant: 2).isActive = true
-        table.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
+        table.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         table.heightAnchor.constraint(equalToConstant: (117/646)*view.bounds.height).isActive = true
         
+    }
+    
+    func setupForBtnAnswer() {
+        _btnAnswer.backgroundColor = UIColor(rgb: 0x51A098, a: 1)
+       
+        
+        _btnAnswer.layer.cornerRadius = 5
+        _btnAnswer.translatesAutoresizingMaskIntoConstraints = false
+        _btnAnswer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+        _btnAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        _btnAnswer.heightAnchor.constraint(equalToConstant: (35/646)*view.bounds.height).isActive = true
+        _btnAnswer.widthAnchor.constraint(equalToConstant: (180/335)*view.bounds.width).isActive = true
     }
     
     
@@ -136,26 +147,24 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return questionArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = UITableViewCell()
+       
         let cell = Bundle.main.loadNibNamed("cellForAnserQuestion", owner: self, options: nil)?.first as! cellForAnserQuestion
-        //cell.textLabel?.text = "ke"
-        cell._lbl.text = "ke"
+        cell._lbl.font = cell._lbl.font.withSize(15)
+        cell._lbl.text = questionArray[indexPath.row]
         
         if indexPath.row == registration.bien1 {
             cell._sw.setOn(true, animated: true)
            cell.contentView.backgroundColor = UIColor(rgb: 0x7296CA, a: 1)
-            //if !cell._sw.isOn {
-                //cell._sw.setOn(true, animated: true)
-           // }
-            print("========\(registration.bien1)")
+           cell._lbl.textColor = UIColor.white
             
         } else {
             cell.backgroundColor = UIColor(rgb: 0xE8E7E6, a: 1)
             cell._sw.setOn(false, animated: true)
+            cell._lbl.textColor = UIColor.gray
         }
         
        
@@ -168,7 +177,7 @@ class registration: UIViewController , GADBannerViewDelegate , UITableViewDelega
         let cell : cellForAnserQuestion = tableView.cellForRow(at: indexPath)! as! cellForAnserQuestion
         
         registration.bien1 = indexPath.row
-        cell._lbl.textColor = UIColor.white
+       // cell._lbl.textColor = UIColor.white
         table.reloadData()
         
         

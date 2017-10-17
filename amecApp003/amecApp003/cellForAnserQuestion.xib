@@ -16,25 +16,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2l-qV-JWu">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="xKg-4Y-l4g"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCV-4U-Fap">
-                        <frame key="frameInset" minX="295" minY="16" width="52" height="19"/>
+                        <frame key="frameInset" minX="295" minY="16" width="52" height="37"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="q4g-Qb-sM4"/>
+                            <constraint firstAttribute="width" constant="50" id="3mE-PM-v8m"/>
                         </constraints>
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="t2l-qV-JWu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="DhL-b7-Xk3"/>
-                    <constraint firstItem="pCV-4U-Fap" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="KGa-6F-WSa"/>
-                    <constraint firstItem="t2l-qV-JWu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LNS-u2-Gae"/>
-                    <constraint firstAttribute="trailing" secondItem="pCV-4U-Fap" secondAttribute="trailing" constant="32" id="SjN-IH-N2n"/>
-                    <constraint firstAttribute="bottom" secondItem="pCV-4U-Fap" secondAttribute="bottom" constant="18" id="XE5-Zb-5HB"/>
-                    <constraint firstItem="pCV-4U-Fap" firstAttribute="leading" secondItem="t2l-qV-JWu" secondAttribute="trailing" constant="235" id="uzH-Ea-hJG"/>
-                    <constraint firstAttribute="bottom" secondItem="t2l-qV-JWu" secondAttribute="bottom" constant="16" id="xYu-Et-iki"/>
+                    <constraint firstItem="pCV-4U-Fap" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Gn-7Q-hR9"/>
+                    <constraint firstAttribute="trailing" secondItem="pCV-4U-Fap" secondAttribute="trailing" constant="10" id="6ec-tP-GXf"/>
+                    <constraint firstItem="t2l-qV-JWu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8gU-Wb-4vJ"/>
+                    <constraint firstAttribute="bottom" secondItem="t2l-qV-JWu" secondAttribute="bottom" constant="16" id="RB1-qZ-cCR"/>
+                    <constraint firstItem="t2l-qV-JWu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="V2j-pS-w3r"/>
+                    <constraint firstItem="pCV-4U-Fap" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eY7-Gy-C8h"/>
+                    <constraint firstAttribute="bottom" secondItem="pCV-4U-Fap" secondAttribute="bottom" constant="8" id="j8w-x4-BFs"/>
+                    <constraint firstItem="t2l-qV-JWu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yEc-Rc-yiv"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
