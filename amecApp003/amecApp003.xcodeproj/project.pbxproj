@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3447EA1C1F95999A00862A8C /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1B1F95999A00862A8C /* registration.swift */; };
+		3447EA1F1F95A58300862A8C /* cellForAnserQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */; };
+		3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */; };
+		3447EA221F95B2C300862A8C /* moto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA211F95B2C300862A8C /* moto.png */; };
+		3447EA241F95B7A800862A8C /* question_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA231F95B7A800862A8C /* question_person.png */; };
 		34645DB11F8DED1E007B0EED /* tutrial1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34645DB01F8DED1E007B0EED /* tutrial1.swift */; };
 		34645DB31F8DF212007B0EED /* button_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB21F8DF212007B0EED /* button_next.png */; };
 		34645DB51F8DF25D007B0EED /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB41F8DF25D007B0EED /* pause.png */; };
@@ -38,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3447EA1B1F95999A00862A8C /* registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
+		3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellForAnserQuestion.swift; sourceTree = "<group>"; };
+		3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellForAnserQuestion.xib; sourceTree = "<group>"; };
+		3447EA211F95B2C300862A8C /* moto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moto.png; sourceTree = "<group>"; };
+		3447EA231F95B7A800862A8C /* question_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_person.png; sourceTree = "<group>"; };
 		34645DB01F8DED1E007B0EED /* tutrial1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutrial1.swift; sourceTree = "<group>"; };
 		34645DB21F8DF212007B0EED /* button_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_next.png; sourceTree = "<group>"; };
 		34645DB41F8DF25D007B0EED /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
@@ -145,6 +155,8 @@
 				34C9A4A01F946D4D002791EE /* ic_forward.png */,
 				34C9A4A91F948730002791EE /* lesson_done.png */,
 				34C9A4AB1F948DF6002791EE /* selected.png */,
+				3447EA211F95B2C300862A8C /* moto.png */,
+				3447EA231F95B7A800862A8C /* question_person.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -155,6 +167,7 @@
 				347DAB211F8CB7A2008DC894 /* chooselanguage.swift */,
 				34645DB01F8DED1E007B0EED /* tutrial1.swift */,
 				349D6ECC1F8F1FA100414B59 /* test001.swift */,
+				3447EA1B1F95999A00862A8C /* registration.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -164,6 +177,8 @@
 			children = (
 				34C9A4A51F94858E002791EE /* cellForTableLanguage.swift */,
 				34C9A4A61F94858E002791EE /* cellForTableLanguage.xib */,
+				3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */,
+				3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */,
 			);
 			name = modal;
 			sourceTree = "<group>";
@@ -237,6 +252,8 @@
 				34C9A4AC1F948DF6002791EE /* selected.png in Resources */,
 				34645DB71F8DF269007B0EED /* play.png in Resources */,
 				34645DB51F8DF25D007B0EED /* pause.png in Resources */,
+				3447EA241F95B7A800862A8C /* question_person.png in Resources */,
+				3447EA221F95B2C300862A8C /* moto.png in Resources */,
 				347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */,
 				34645DB31F8DF212007B0EED /* button_next.png in Resources */,
 				34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */,
@@ -245,6 +262,7 @@
 				34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */,
 				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
 				347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */,
+				3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */,
 				34C9A4AA1F948730002791EE /* lesson_done.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3447EA1C1F95999A00862A8C /* registration.swift in Sources */,
 				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
 				34C9A4A71F94858E002791EE /* cellForTableLanguage.swift in Sources */,
+				3447EA1F1F95A58300862A8C /* cellForAnserQuestion.swift in Sources */,
 				347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */,
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
 				349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */,
