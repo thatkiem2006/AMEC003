@@ -12,6 +12,11 @@
 		3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */; };
 		3447EA221F95B2C300862A8C /* moto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA211F95B2C300862A8C /* moto.png */; };
 		3447EA241F95B7A800862A8C /* question_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA231F95B7A800862A8C /* question_person.png */; };
+		3447EA291F95D5E800862A8C /* ic_text_register_correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA271F95D5E800862A8C /* ic_text_register_correct.png */; };
+		3447EA2A1F95D5E800862A8C /* ic_text_register_wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA281F95D5E800862A8C /* ic_text_register_wrong.png */; };
+		3447EA2C1F95DD0800862A8C /* amecText.png in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA2B1F95DD0800862A8C /* amecText.png */; };
+		3447EA301F95E96300862A8C /* test002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA2F1F95E96300862A8C /* test002.swift */; };
+		3447EA321F960D1900862A8C /* registration2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA311F960D1900862A8C /* registration2.swift */; };
 		34645DB11F8DED1E007B0EED /* tutrial1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34645DB01F8DED1E007B0EED /* tutrial1.swift */; };
 		34645DB31F8DF212007B0EED /* button_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB21F8DF212007B0EED /* button_next.png */; };
 		34645DB51F8DF25D007B0EED /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 34645DB41F8DF25D007B0EED /* pause.png */; };
@@ -48,6 +53,11 @@
 		3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellForAnserQuestion.xib; sourceTree = "<group>"; };
 		3447EA211F95B2C300862A8C /* moto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moto.png; sourceTree = "<group>"; };
 		3447EA231F95B7A800862A8C /* question_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_person.png; sourceTree = "<group>"; };
+		3447EA271F95D5E800862A8C /* ic_text_register_correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_text_register_correct.png; sourceTree = "<group>"; };
+		3447EA281F95D5E800862A8C /* ic_text_register_wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_text_register_wrong.png; sourceTree = "<group>"; };
+		3447EA2B1F95DD0800862A8C /* amecText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amecText.png; sourceTree = "<group>"; };
+		3447EA2F1F95E96300862A8C /* test002.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test002.swift; sourceTree = "<group>"; };
+		3447EA311F960D1900862A8C /* registration2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registration2.swift; sourceTree = "<group>"; };
 		34645DB01F8DED1E007B0EED /* tutrial1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutrial1.swift; sourceTree = "<group>"; };
 		34645DB21F8DF212007B0EED /* button_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_next.png; sourceTree = "<group>"; };
 		34645DB41F8DF25D007B0EED /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
@@ -157,6 +167,9 @@
 				34C9A4AB1F948DF6002791EE /* selected.png */,
 				3447EA211F95B2C300862A8C /* moto.png */,
 				3447EA231F95B7A800862A8C /* question_person.png */,
+				3447EA271F95D5E800862A8C /* ic_text_register_correct.png */,
+				3447EA281F95D5E800862A8C /* ic_text_register_wrong.png */,
+				3447EA2B1F95DD0800862A8C /* amecText.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -167,7 +180,9 @@
 				347DAB211F8CB7A2008DC894 /* chooselanguage.swift */,
 				34645DB01F8DED1E007B0EED /* tutrial1.swift */,
 				349D6ECC1F8F1FA100414B59 /* test001.swift */,
+				3447EA2F1F95E96300862A8C /* test002.swift */,
 				3447EA1B1F95999A00862A8C /* registration.swift */,
+				3447EA311F960D1900862A8C /* registration2.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -255,15 +270,18 @@
 				3447EA241F95B7A800862A8C /* question_person.png in Resources */,
 				3447EA221F95B2C300862A8C /* moto.png in Resources */,
 				347DAB0C1F8CB2AE008DC894 /* Main.storyboard in Resources */,
+				3447EA2A1F95D5E800862A8C /* ic_text_register_wrong.png in Resources */,
 				34645DB31F8DF212007B0EED /* button_next.png in Resources */,
 				34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */,
 				347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */,
 				34C9A4A81F94858E002791EE /* cellForTableLanguage.xib in Resources */,
 				34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */,
 				347DAB1D1F8CB553008DC894 /* background_splash.gif in Resources */,
+				3447EA291F95D5E800862A8C /* ic_text_register_correct.png in Resources */,
 				347DAB1F1F8CB64A008DC894 /* ic_start_splash.png in Resources */,
 				3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */,
 				34C9A4AA1F948730002791EE /* lesson_done.png in Resources */,
+				3447EA2C1F95DD0800862A8C /* amecText.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +300,8 @@
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
 				349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */,
 				34645DB11F8DED1E007B0EED /* tutrial1.swift in Sources */,
+				3447EA301F95E96300862A8C /* test002.swift in Sources */,
+				3447EA321F960D1900862A8C /* registration2.swift in Sources */,
 				347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

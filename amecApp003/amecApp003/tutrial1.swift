@@ -244,6 +244,7 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         
         playerController.player = player
         
+        
         self.addChildViewController(playerController)
         //self.view.addSubview(playerController.view)
         
@@ -268,7 +269,7 @@ class tutrial1: UIViewController , GADBannerViewDelegate {
         _viewAds.translatesAutoresizingMaskIntoConstraints = false
         _viewAds.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         _viewAds.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        _viewAds.heightAnchor.constraint(equalToConstant: (28/446)*view.bounds.height)
+        _viewAds.heightAnchor.constraint(equalToConstant: (28/446)*view.bounds.height).isActive = true
         _viewAds.topAnchor.constraint(equalTo: view.topAnchor, constant: (41/442)*view.bounds.height).isActive = true
         _viewAds.backgroundColor = UIColor.red    }
     
