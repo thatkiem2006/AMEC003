@@ -15,6 +15,10 @@ class registration2: UIViewController , GADBannerViewDelegate {
     @IBOutlet weak var _strollView: UIScrollView!
     @IBOutlet weak var _viewForRegister: UIView!
     @IBOutlet weak var _viewLogin: UIView!
+    @IBOutlet weak var _stackView: UIStackView!
+    @IBOutlet weak var _btnRegis: UIButton!
+    @IBOutlet weak var _btnLogin: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,8 @@ class registration2: UIViewController , GADBannerViewDelegate {
         setupAds()
         _viewLogin.isHidden = true
         _viewForRegister.isHidden = true
+        _btnRegis.layer.cornerRadius = 5
+        _btnLogin.layer.cornerRadius = 5
        
         
     }
@@ -42,10 +48,23 @@ class registration2: UIViewController , GADBannerViewDelegate {
     
     @IBAction func actionLogin(_ sender: AnyObject) {
         _viewLogin.isHidden = !_viewLogin.isHidden
+        if !_viewLogin.isHidden {
+            _viewForRegister.isHidden = true
+            
+            let _go = CGPoint(x: 0, y:_stackView.frame.origin.y)
+            _strollView.setContentOffset(_go, animated: true)
+        }
     }
     
     @IBAction func actionRegistration(_ sender: AnyObject) {
         _viewForRegister.isHidden = !_viewForRegister.isHidden
+        
+        if !_viewForRegister.isHidden {
+            _viewLogin.isHidden = true
+            
+            let _go = CGPoint(x: 0, y:_stackView.frame.origin.y + _viewForRegister.bounds.height/5)
+            _strollView.setContentOffset(_go, animated: true)
+        }
     }
     
     
