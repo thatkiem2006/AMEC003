@@ -13,6 +13,8 @@ class registration2: UIViewController , GADBannerViewDelegate {
 
     @IBOutlet weak var _viewAds: GADBannerView!
     @IBOutlet weak var _strollView: UIScrollView!
+    @IBOutlet weak var _viewForRegister: UIView!
+    @IBOutlet weak var _viewLogin: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class registration2: UIViewController , GADBannerViewDelegate {
         super.viewWillAppear(animated)
         setupNavigationBar()
         setupAds()
+        _viewLogin.isHidden = true
+        _viewForRegister.isHidden = true
        
         
     }
@@ -35,6 +39,19 @@ class registration2: UIViewController , GADBannerViewDelegate {
 //        _strollView.setContentOffset(bottomOffset, animated: true)
         
     }
+    
+    @IBAction func actionLogin(_ sender: AnyObject) {
+        _viewLogin.isHidden = !_viewLogin.isHidden
+    }
+    
+    @IBAction func actionRegistration(_ sender: AnyObject) {
+        _viewForRegister.isHidden = !_viewForRegister.isHidden
+    }
+    
+    
+    
+    
+    
     
     func setupNavigationBar(){
         barBtnLeft()
