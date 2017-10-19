@@ -729,7 +729,7 @@
             </objects>
             <point key="canvasLocation" x="3245.5999999999999" y="109.29535232383809"/>
         </scene>
-        <!--Home Controller-->
+        <!--HOME-->
         <scene sceneID="He8-UA-etP">
             <objects>
                 <viewController id="iMx-KA-5ys" customClass="homeController" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
@@ -741,27 +741,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-Co-01N">
-                                <frame key="frameInset" minX="143" minY="257" width="42" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSE-gH-j8A" customClass="GADBannerView">
+                                <frame key="frameInset" minY="64" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vo8-Fg-bG4">
+                                <frame key="frameInset" minY="134" width="375" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sQ-HZ-SWv">
+                                        <frame key="frameInset" minX="50" minY="16" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-WV-j7U">
+                                        <frame key="frameInset" minX="50" minY="160" width="240" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wQ-P8-sPi">
+                                        <frame key="frameInset" minX="50" minY="189" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.93435156090000004" blue="0.58511946569999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ajk-sG-k7z">
+                    <navigationItem key="navigationItem" title="HOME" id="Ajk-sG-k7z">
                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="95d-X1-IqX">
                             <connections>
                                 <segue destination="frb-4c-yoW" kind="show" id="Xsb-DT-XG9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="_v1" destination="8sQ-HZ-SWv" id="fnF-az-pA6"/>
+                        <outlet property="_v2" destination="GGQ-WV-j7U" id="adn-8K-mEN"/>
+                        <outlet property="_v3" destination="0wQ-P8-sPi" id="Wol-zl-Nq1"/>
+                        <outlet property="_vContainer" destination="vo8-Fg-bG4" id="F9Y-Fg-uVq"/>
+                        <outlet property="_viewAds" destination="uSE-gH-j8A" id="dQC-oi-lG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecM-9X-Wuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5055" y="-1146"/>
+            <point key="canvasLocation" x="5053.6000000000004" y="-1146.4767616191905"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="eFi-ot-1Mk">

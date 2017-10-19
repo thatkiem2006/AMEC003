@@ -73,6 +73,9 @@ class registration2: UIViewController , GADBannerViewDelegate , UITextFieldDeleg
     @IBAction func actionBtnLogin(_ sender: AnyObject) {
         let mainTabController = storyboard?.instantiateViewController(withIdentifier: "mainTabBarController") as! mainTabBarController
         mainTabController.selectedViewController = mainTabController.viewControllers?[2]
+        
+       
+        
         present(mainTabController, animated: true, completion: nil)
         
     }

@@ -32,6 +32,8 @@ class mainTabBarController: UITabBarController {
         tabBar.tintColor = UIColor.red
         let bien = tabBar.frame
         tabBar.frame = CGRect(x: bien.origin.x, y: bien.origin.y - 20, width: bien.size.width, height: bien.size.height + 20)
+        
+        
     }
    // let tabBarHeight = self.tabBarController.tabBar.frame.size.height
 }
