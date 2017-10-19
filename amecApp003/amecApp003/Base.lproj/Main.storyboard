@@ -358,6 +358,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="ysF-3f-J7S"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alM-WD-31F">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -371,6 +374,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="GrY-MD-qu5"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAD-s1-Nv6">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -384,6 +390,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="Ncc-QR-E2h"/>
+                                                                </connections>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i5-aT-wIm">
                                                                 <color key="backgroundColor" red="0.93929031699999999" green="0.44058780689999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -435,6 +444,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="3TB-Q4-3fz"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVW-kG-34V">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -448,6 +460,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="dVQ-mn-Snn"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onf-1x-JIQ">
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -462,7 +477,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="actionTest:" destination="frb-4c-yoW" eventType="editingDidBegin" id="htR-SK-YDo"/>
+                                                                    <outlet property="delegate" destination="frb-4c-yoW" id="E88-5T-Xrr"/>
                                                                 </connections>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zK-H0-JES">
@@ -484,7 +499,7 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBL-Db-Bgx">
                                                                 <color key="backgroundColor" red="0.20392156862745098" green="0.30980392156862746" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="Join">
+                                                                <state key="normal" title="Register">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
@@ -557,7 +572,7 @@
                                                 <color key="backgroundColor" red="0.82352941180000006" green="0.89411764709999997" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="DYV-Mx-AMu" secondAttribute="trailing" constant="2" id="6H0-gY-avA"/>
-                                                    <constraint firstAttribute="height" constant="900" id="9D6-H7-sJZ"/>
+                                                    <constraint firstAttribute="height" constant="780" id="9D6-H7-sJZ"/>
                                                     <constraint firstItem="DYV-Mx-AMu" firstAttribute="leading" secondItem="TUl-Ke-bYp" secondAttribute="leading" constant="2" id="Wjf-yv-MP1"/>
                                                     <constraint firstItem="DYV-Mx-AMu" firstAttribute="top" secondItem="TUl-Ke-bYp" secondAttribute="top" id="wdw-8a-oHM"/>
                                                 </constraints>
@@ -596,6 +611,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="frb-4c-yoW" id="KhC-QX-9YG"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-8N-4iB">
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -609,15 +627,21 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="frb-4c-yoW" id="ga1-cp-Sds"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8T-fw-WEF">
                                                         <color key="backgroundColor" red="0.20392156859999999" green="0.30980392159999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="raB-V1-gqD"/>
+                                                            <constraint firstAttribute="height" constant="50" id="raB-V1-gqD"/>
                                                         </constraints>
-                                                        <state key="normal" title="Ok">
+                                                        <state key="normal" title="Login">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="actionBtnLogin:" destination="frb-4c-yoW" eventType="touchUpInside" id="YiC-Gc-mrQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.82352941176470584" green="0.89411764705882357" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
@@ -691,7 +715,9 @@
                     <size key="freeformSize" width="375" height="2667"/>
                     <connections>
                         <outlet property="_btnLogin" destination="TlB-bP-sR0" id="uUi-YM-Am0"/>
+                        <outlet property="_btnLoginOK" destination="Y8T-fw-WEF" id="Z5I-Qy-Y41"/>
                         <outlet property="_btnRegis" destination="hlQ-ie-Vsb" id="jpo-cK-VJx"/>
+                        <outlet property="_btnRegisOK" destination="GBL-Db-Bgx" id="SwN-lQ-ZPC"/>
                         <outlet property="_stackView" destination="iOS-oV-x0M" id="rvf-va-wHf"/>
                         <outlet property="_strollView" destination="rSV-ce-yfv" id="O15-ml-Mru"/>
                         <outlet property="_viewAds" destination="lwf-w7-XNr" id="zGt-UF-jVN"/>
@@ -702,6 +728,136 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wn-17-4R4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3245.5999999999999" y="109.29535232383809"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="He8-UA-etP">
+            <objects>
+                <viewController id="iMx-KA-5ys" customClass="homeController" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FMd-M4-Xaw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hLw-kb-pmY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ulz-7z-daR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-Co-01N">
+                                <frame key="frameInset" minX="143" minY="257" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ajk-sG-k7z">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="95d-X1-IqX">
+                            <connections>
+                                <segue destination="frb-4c-yoW" kind="show" id="Xsb-DT-XG9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecM-9X-Wuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5055" y="-1146"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="eFi-ot-1Mk">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBarController" id="4Zi-ZQ-qrd" customClass="mainTabBarController" customModule="amecApp003" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fzt-77-vGp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HlL-SA-5Ib" kind="relationship" relationship="viewControllers" id="def-ae-FVE"/>
+                        <segue destination="J4U-Bj-2jv" kind="relationship" relationship="viewControllers" id="KkB-fR-biA"/>
+                        <segue destination="g31-2v-B8B" kind="relationship" relationship="viewControllers" id="Z08-Xa-m8u"/>
+                        <segue destination="Smc-aw-IwM" kind="relationship" relationship="viewControllers" id="zmD-dT-lAU"/>
+                        <segue destination="jK2-bY-Ww6" kind="relationship" relationship="viewControllers" id="eI5-DG-dOc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9k-GG-JNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4175" y="-237"/>
+        </scene>
+        <!--SETTING-->
+        <scene sceneID="R83-VB-aYD">
+            <objects>
+                <viewController id="Smc-aw-IwM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aHf-S1-lSM"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2g-ac-fbV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P1k-pB-5ra">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SETTING" image="bt_setting" selectedImage="bt_setting2" id="iRk-ap-OB0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gj7-7a-GWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4945" y="-495"/>
+        </scene>
+        <!--NEWS-->
+        <scene sceneID="BGN-gH-gMd">
+            <objects>
+                <viewController id="jK2-bY-Ww6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N7G-YL-O4q"/>
+                        <viewControllerLayoutGuide type="bottom" id="rrD-xn-VSu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRW-cV-i0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="NEWS" image="bt_news" selectedImage="bt_news2" id="3V2-EA-dBp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxq-rk-X9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4972" y="155"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="g2y-aP-jar">
+            <objects>
+                <viewController id="HlL-SA-5Ib" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jeB-rO-xHu"/>
+                        <viewControllerLayoutGuide type="bottom" id="oqJ-cy-lob"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6WS-B8-ehD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="HOME" image="bt_home" selectedImage="bt_home2" id="YkN-mJ-oDm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acE-Ad-RIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4892" y="936"/>
+        </scene>
+        <!--BOOKMARK-->
+        <scene sceneID="9BC-8f-1n6">
+            <objects>
+                <viewController id="J4U-Bj-2jv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5pK-BL-noc"/>
+                        <viewControllerLayoutGuide type="bottom" id="eP3-8p-uZA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J3n-fc-jHr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BOOKMARK" image="bt_bookmark" selectedImage="bt_bookmark2" id="pAH-sn-jRW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEK-12-jV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4465" y="1625"/>
         </scene>
         <!--Test001-->
         <scene sceneID="M45-Tc-MgT">
@@ -777,10 +933,40 @@
             </objects>
             <point key="canvasLocation" x="799" y="-662"/>
         </scene>
+        <!--GARAGE-->
+        <scene sceneID="wc8-5k-PG3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g31-2v-B8B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="GARAGE" image="bt_garage2" id="ErO-QE-WXD">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5fg-vY-hh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iMx-KA-5ys" kind="relationship" relationship="rootViewController" id="m3p-Fm-GSx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4U-Ea-2xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4281" y="-1146"/>
+        </scene>
     </scenes>
     <resources>
         <image name="amecText.png" width="59" height="20"/>
         <image name="background_splash.gif" width="749" height="1331"/>
+        <image name="bt_bookmark" width="50" height="50"/>
+        <image name="bt_bookmark2" width="50" height="50"/>
+        <image name="bt_garage2" width="50" height="50"/>
+        <image name="bt_home" width="50" height="50"/>
+        <image name="bt_home2" width="50" height="50"/>
+        <image name="bt_news" width="50" height="50"/>
+        <image name="bt_news2" width="50" height="50"/>
+        <image name="bt_setting" width="50" height="50"/>
+        <image name="bt_setting2" width="50" height="50"/>
         <image name="button_next.png" width="226" height="226"/>
         <image name="ic_background_spinner.png" width="1355" height="176"/>
         <image name="ic_forward.png" width="62" height="114"/>
@@ -789,4 +975,7 @@
         <image name="moto.png" width="302" height="201"/>
         <image name="question_person.png" width="221" height="338"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xsb-DT-XG9"/>
+    </inferredMetricsTieBreakers>
 </document>

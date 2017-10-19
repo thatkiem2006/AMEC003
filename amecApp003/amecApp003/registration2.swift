@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class registration2: UIViewController , GADBannerViewDelegate {
+class registration2: UIViewController , GADBannerViewDelegate , UITextFieldDelegate {
 
     @IBOutlet weak var _viewAds: GADBannerView!
     @IBOutlet weak var _strollView: UIScrollView!
@@ -18,6 +18,9 @@ class registration2: UIViewController , GADBannerViewDelegate {
     @IBOutlet weak var _stackView: UIStackView!
     @IBOutlet weak var _btnRegis: UIButton!
     @IBOutlet weak var _btnLogin: UIButton!
+    @IBOutlet weak var _btnRegisOK: UIButton!
+    @IBOutlet weak var _btnLoginOK: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -34,6 +37,8 @@ class registration2: UIViewController , GADBannerViewDelegate {
         _viewForRegister.isHidden = true
         _btnRegis.layer.cornerRadius = 5
         _btnLogin.layer.cornerRadius = 5
+        _btnLoginOK.layer.cornerRadius = 5
+        _btnRegisOK.layer.cornerRadius = 5
        
         
     }
@@ -46,15 +51,32 @@ class registration2: UIViewController , GADBannerViewDelegate {
         
     }
     
+    // keyboard
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //======================
+    
     @IBAction func actionLogin(_ sender: AnyObject) {
         _viewLogin.isHidden = !_viewLogin.isHidden
         if !_viewLogin.isHidden {
             _viewForRegister.isHidden = true
             
-            let _go = CGPoint(x: 0, y:_stackView.frame.origin.y)
-            _strollView.setContentOffset(_go, animated: true)
+          
         }
     }
+    
+    @IBAction func actionBtnLogin(_ sender: AnyObject) {
+        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "mainTabBarController") as! mainTabBarController
+        mainTabController.selectedViewController = mainTabController.viewControllers?[2]
+        present(mainTabController, animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func actionRegistration(_ sender: AnyObject) {
         _viewForRegister.isHidden = !_viewForRegister.isHidden
@@ -107,12 +129,7 @@ class registration2: UIViewController , GADBannerViewDelegate {
     
     }
     
-    @IBAction func actionTest(_ sender: AnyObject) {
-        
-        print("============koko======")
-        let bottomOffset = CGPoint(x: 0, y:100)
-        _strollView.setContentOffset(bottomOffset, animated: true)
-    }
+   
     
     
     
