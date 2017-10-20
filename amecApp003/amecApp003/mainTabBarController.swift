@@ -23,7 +23,7 @@ class mainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-         let bien2 = tabBar.frame.size.height + 20
+         let bien2 = tabBar.frame.size.height
         UserDefaults.standard.set(bien2, forKey: "heigh")
         
         tabBar.backgroundColor = UIColor.white
@@ -37,11 +37,10 @@ class mainTabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let bien = tabBar.frame
-        tabBar.frame = CGRect(x: bien.origin.x, y: bien.origin.y - 20, width: bien.size.width, height: bien.size.height + 20)
+      //  let bien = tabBar.frame
+       // tabBar.frame = CGRect(x: bien.origin.x, y: bien.origin.y - 20, width: bien.size.width, height: bien.size.height + 20)
         
     
         
     }
-   // let tabBarHeight = self.tabBarController.tabBar.frame.size.height
-}
+  }

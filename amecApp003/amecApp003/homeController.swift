@@ -23,14 +23,23 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
     @IBOutlet weak var _btn3_5: UIButton!
     
     @IBOutlet weak var _vContainer: UIView!
+    @IBOutlet weak var _table: UITableView!
     
-    let _space : CGFloat = 5
+    let _space : CGFloat = 25
     var _heighBtn : CGFloat = 0
+    var _heighV3 : CGFloat = 200
+    let _spaceLeft : CGFloat = 20
+    var _rowSelected : Int = 200
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupAds()
+        _table.delegate = self
+        _table.dataSource = self
+        _table.separatorStyle = .none
+        
+        
         
 
         // Do any additional setup after loading the view.
@@ -41,10 +50,12 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
         
         
         // chieu cao navigation bar
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
+       // self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
         navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xF8F8F8, a: 1)
 
+        setupAds()
         setupForViewContainer()
+        setupForTable()
     }
     
     
@@ -63,8 +74,20 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
         _viewAds.translatesAutoresizingMaskIntoConstraints = false
         _viewAds.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         _viewAds.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        _viewAds.heightAnchor.constraint(equalToConstant: (39/646)*self.view.frame.size.height).isActive = true
+       // _viewAds.heightAnchor.constraint(equalToConstant: (39/646)*self.view.frame.size.height).isActive = true
+        _viewAds.heightAnchor.constraint(equalToConstant: 50).isActive = true
         _viewAds.topAnchor.constraint(equalTo: view.topAnchor, constant: (41/442)*view.bounds.height).isActive = true
+    }
+    
+    func setupForTable() {
+        
+        _table.backgroundColor = UIColor(rgb: 0xE6CE20, a: 1)
+        _table.translatesAutoresizingMaskIntoConstraints = false
+        _table.topAnchor.constraint(equalTo: _v1.topAnchor, constant: 0).isActive = true
+        _table.leftAnchor.constraint(equalTo: _v1.leftAnchor, constant: 0).isActive = true
+        _table.rightAnchor.constraint(equalTo: _v1.rightAnchor, constant: 0).isActive = true
+         _table.bottomAnchor.constraint(equalTo: _v1.bottomAnchor, constant: -10).isActive = true
+        
     }
     
     func setupForViewContainer(){
@@ -82,32 +105,36 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
         _vContainer.addSubview(_v2)
         _vContainer.addSubview(_v3)
         
-        setupForV1()
-        setupForV2()
         setupForV3()
+        
+        setupForV2()
+        setupForV1()
+        
     }
     
     func setupForV1() {
         _v1.translatesAutoresizingMaskIntoConstraints = false
-        _v1.topAnchor.constraint(equalTo: _vContainer.topAnchor, constant: 0).isActive = true
+        _v1.bottomAnchor.constraint(equalTo: _v2.topAnchor, constant: 0).isActive = true
         _v1.leftAnchor.constraint(equalTo: _vContainer.leftAnchor, constant: 0).isActive = true
         _v1.rightAnchor.constraint(equalTo: _vContainer.rightAnchor, constant: 0).isActive = true
-        _v1.heightAnchor.constraint(equalTo: _vContainer.heightAnchor, multiplier: 142/340).isActive = true
+       // _v1.heightAnchor.constraint(equalTo: _vContainer.heightAnchor, multiplier: 142/340).isActive = true
+        _v1.topAnchor.constraint(equalTo: _vContainer.topAnchor, constant: 0).isActive = true
         
     }
     
     func setupForV2() {
         _v2.translatesAutoresizingMaskIntoConstraints = false
-        _v2.topAnchor.constraint(equalTo: _v1.bottomAnchor, constant: 0).isActive = true
+        _v2.bottomAnchor.constraint(equalTo: _v3.topAnchor, constant: 0).isActive = true
         _v2.leftAnchor.constraint(equalTo: _vContainer.leftAnchor, constant: 0).isActive = true
         _v2.rightAnchor.constraint(equalTo: _vContainer.rightAnchor, constant: 0).isActive = true
-        _v2.heightAnchor.constraint(equalToConstant: 5).isActive = true
+        _v2.heightAnchor.constraint(equalToConstant: 1).isActive = true
 
     }
     
     func setupForV3() {
         _v3.translatesAutoresizingMaskIntoConstraints = false
-        _v3.topAnchor.constraint(equalTo: _v2.bottomAnchor, constant: 0).isActive = true
+       // _v3.topAnchor.constraint(equalTo: _v2.bottomAnchor, constant: 0).isActive = true
+        _v3.heightAnchor.constraint(equalToConstant: _heighV3).isActive = true
         _v3.leftAnchor.constraint(equalTo: _vContainer.leftAnchor, constant: 0).isActive = true
         _v3.rightAnchor.constraint(equalTo: _vContainer.rightAnchor, constant: 0).isActive = true
         _v3.bottomAnchor.constraint(equalTo: _vContainer.bottomAnchor, constant: 0).isActive = true
@@ -128,42 +155,42 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
     
     func setupForV3_1() {
         _btn3_1.translatesAutoresizingMaskIntoConstraints = false
-        _btn3_1.topAnchor.constraint(equalTo: _v3.topAnchor, constant: _space).isActive = true
-        _btn3_1.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _space).isActive = true
-        _btn3_1.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_space).isActive = true
-        _btn3_1.heightAnchor.constraint(equalToConstant: _heighBtn).isActive = true
+        _btn3_1.topAnchor.constraint(equalTo: _v3.topAnchor, constant: _space/6).isActive = true
+        _btn3_1.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _spaceLeft).isActive = true
+        _btn3_1.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_spaceLeft).isActive = true
+        _btn3_1.heightAnchor.constraint(equalToConstant: (_heighV3 - _space)/5).isActive = true
         
         print("===========\(_v3.frame.size.height )")
     }
     
     func setupForV3_2() {
         _btn3_2.translatesAutoresizingMaskIntoConstraints = false
-        _btn3_2.topAnchor.constraint(equalTo: _btn3_1.bottomAnchor, constant: _space).isActive = true
-        _btn3_2.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _space).isActive = true
-        _btn3_2.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_space).isActive = true
-        _btn3_2.heightAnchor.constraint(equalToConstant: _heighBtn).isActive = true
+        _btn3_2.topAnchor.constraint(equalTo: _btn3_1.bottomAnchor, constant: _space/6).isActive = true
+        _btn3_2.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _spaceLeft).isActive = true
+        _btn3_2.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_spaceLeft).isActive = true
+        _btn3_2.heightAnchor.constraint(equalToConstant: (_heighV3 - _space)/5).isActive = true
     }
     func setupForV3_3() {
         _btn3_3.translatesAutoresizingMaskIntoConstraints = false
-        _btn3_3.topAnchor.constraint(equalTo: _btn3_2.bottomAnchor, constant: _space).isActive = true
-        _btn3_3.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _space).isActive = true
-        _btn3_3.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_space).isActive = true
-        _btn3_3.heightAnchor.constraint(equalToConstant: _heighBtn).isActive = true
+        _btn3_3.topAnchor.constraint(equalTo: _btn3_2.bottomAnchor, constant: _space/6).isActive = true
+        _btn3_3.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _spaceLeft).isActive = true
+        _btn3_3.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_spaceLeft).isActive = true
+        _btn3_3.heightAnchor.constraint(equalToConstant: (_heighV3 - _space)/5).isActive = true
     }
     func setupForV3_4() {
         _btn3_4.translatesAutoresizingMaskIntoConstraints = false
-        _btn3_4.topAnchor.constraint(equalTo: _btn3_3.bottomAnchor, constant: _space).isActive = true
-        _btn3_4.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _space).isActive = true
-        _btn3_4.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_space).isActive = true
-        _btn3_4.heightAnchor.constraint(equalToConstant: _heighBtn).isActive = true
+        _btn3_4.topAnchor.constraint(equalTo: _btn3_3.bottomAnchor, constant: _space/6).isActive = true
+        _btn3_4.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _spaceLeft).isActive = true
+        _btn3_4.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_spaceLeft).isActive = true
+        _btn3_4.heightAnchor.constraint(equalToConstant: (_heighV3 - _space)/5).isActive = true
     }
     
     func setupForV3_5() {
         _btn3_5.translatesAutoresizingMaskIntoConstraints = false
-        _btn3_5.topAnchor.constraint(equalTo: _btn3_4.bottomAnchor, constant: _space).isActive = true
-        _btn3_5.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _space).isActive = true
-        _btn3_5.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_space).isActive = true
-        _btn3_5.heightAnchor.constraint(equalToConstant: _heighBtn).isActive = true
+        _btn3_5.topAnchor.constraint(equalTo: _btn3_4.bottomAnchor, constant: _space/6).isActive = true
+        _btn3_5.leftAnchor.constraint(equalTo: _v3.leftAnchor, constant: _spaceLeft).isActive = true
+        _btn3_5.rightAnchor.constraint(equalTo: _v3.rightAnchor, constant: -_spaceLeft).isActive = true
+        _btn3_5.heightAnchor.constraint(equalToConstant: (_heighV3 - _space)/5).isActive = true
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -171,13 +198,51 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        return cell
+        //let cell = UITableViewCell()
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! cell1
+            cell._lblCell1.text = "Lessions"
+            cell.backgroundColor = UIColor(rgb: 0xE6CE20, a: 1)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! cell2
+            cell._viewCell2.layer.cornerRadius = 2
+            cell._viewCell2.layer.borderWidth = 1
+            cell._viewCell2.layer.borderColor = UIColor.gray.cgColor
+            
+            if _rowSelected == indexPath.row {
+                cell._viewCell2.backgroundColor = UIColor(rgb: 0xBDD9F0, a: 1)
+                cell._imgCell2.image = UIImage(named: "lesson_done")
+            } else {
+                cell._viewCell2.backgroundColor = UIColor.white
+                cell._imgCell2.image = UIImage(named: "")
+            }
+            
+            
+            cell._lblCell2.text = "Lession " + "\(indexPath.row)"
+            cell.backgroundColor = UIColor(rgb: 0xE6CE20, a: 1)
+            
+            return cell
+        }
+        
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        _rowSelected = indexPath.row
+        _table.reloadData()
+        
+             
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+
 
 
     
