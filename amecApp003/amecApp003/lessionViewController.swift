@@ -72,6 +72,14 @@ class lessionViewController: UIViewController , GADBannerViewDelegate , UITableV
             cell._lbl2.textColor = UIColor.white
             cell._viewLine.backgroundColor = UIColor.white
             cell._viewCell.backgroundColor = UIColor(rgb: 0x3B5CA0, a: 1)
+            
+            cell._viewCell.layer.shadowColor = UIColor.gray
+                .cgColor
+            
+            cell._viewCell.layer.shadowOffset  = CGSize(width: 1, height: 1) //1.75
+            cell._viewCell.layer.shadowRadius = 1.7
+            cell._viewCell.layer.shadowOpacity = 1
+            
             return cell
         } else {
           
@@ -82,6 +90,16 @@ class lessionViewController: UIViewController , GADBannerViewDelegate , UITableV
             cell._lbl2.text = "test " + "\(indexPath.row)"
             cell._lbl2.textColor = UIColor.gray
             cell._viewCell.backgroundColor = UIColor.white
+            cell._viewCell.layer.borderWidth = 1
+            cell._viewCell.layer.borderColor = UIColor.gray.cgColor
+            //cell._viewCell.dropShadow(color: .red, opacity: 1, offSet: CGSize(width: -0.1, height: 0.1), radius: 1, scale: true)
+            cell._viewCell.layer.shadowColor = UIColor.gray
+            .cgColor
+            
+            cell._viewCell.layer.shadowOffset  = CGSize(width: 1, height: 1) //1.75
+            cell._viewCell.layer.shadowRadius = 1.7
+            cell._viewCell.layer.shadowOpacity = 1
+            
 
             
 //            if _rowSelected == indexPath.row {
@@ -111,7 +129,36 @@ class lessionViewController: UIViewController , GADBannerViewDelegate , UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-  
+    
+
+}
 
 
+extension UIView {
+    
+    // OUTPUT 1
+    func dropShadow(scale: Bool = true) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.layer.shadowRadius = 1
+        
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
+    // OUTPUT 2
+    func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowOffset = offSet
+        self.layer.shadowRadius = radius
+        
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
 }
