@@ -38,6 +38,9 @@
 		347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DAB231F8CB820008DC894 /* ic_background_spinner.png */; };
 		347DF2491F99A24800435F41 /* cell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DF2481F99A24800435F41 /* cell1.swift */; };
 		347DF24B1F99A25800435F41 /* cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DF24A1F99A25800435F41 /* cell2.swift */; };
+		347DF24F1F99DD8100435F41 /* lessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DF24E1F99DD8100435F41 /* lessionViewController.swift */; };
+		347DF2511F99E61F00435F41 /* cellTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DF2501F99E61F00435F41 /* cellTips.swift */; };
+		347DF2531F99EE2300435F41 /* lesson_done_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 347DF2521F99EE2300435F41 /* lesson_done_2.png */; };
 		3488FDAC1F985D1500A89D43 /* mainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3488FDAB1F985D1500A89D43 /* mainTabBarController.swift */; };
 		3488FDB21F98784700A89D43 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3488FDB11F98784700A89D43 /* homeController.swift */; };
 		349D6ECA1F8F1D4C00414B59 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */; };
@@ -85,6 +88,9 @@
 		347DAB231F8CB820008DC894 /* ic_background_spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_background_spinner.png; sourceTree = "<group>"; };
 		347DF2481F99A24800435F41 /* cell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell1.swift; sourceTree = "<group>"; };
 		347DF24A1F99A25800435F41 /* cell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell2.swift; sourceTree = "<group>"; };
+		347DF24E1F99DD8100435F41 /* lessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lessionViewController.swift; sourceTree = "<group>"; };
+		347DF2501F99E61F00435F41 /* cellTips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellTips.swift; sourceTree = "<group>"; };
+		347DF2521F99EE2300435F41 /* lesson_done_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lesson_done_2.png; sourceTree = "<group>"; };
 		3488FDAB1F985D1500A89D43 /* mainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainTabBarController.swift; sourceTree = "<group>"; };
 		3488FDB11F98784700A89D43 /* homeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		349D6EC81F8F1D4C00414B59 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				3447EA271F95D5E800862A8C /* ic_text_register_correct.png */,
 				3447EA281F95D5E800862A8C /* ic_text_register_wrong.png */,
 				3447EA2B1F95DD0800862A8C /* amecText.png */,
+				347DF2521F99EE2300435F41 /* lesson_done_2.png */,
 			);
 			name = picture;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 				3447EA311F960D1900862A8C /* registration2.swift */,
 				3488FDB11F98784700A89D43 /* homeController.swift */,
 				3488FDAB1F985D1500A89D43 /* mainTabBarController.swift */,
+				347DF24E1F99DD8100435F41 /* lessionViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 				34C9A4A61F94858E002791EE /* cellForTableLanguage.xib */,
 				3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */,
 				3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */,
+				347DF2501F99E61F00435F41 /* cellTips.swift */,
 				347DF2481F99A24800435F41 /* cell1.swift */,
 				347DF24A1F99A25800435F41 /* cell2.swift */,
 			);
@@ -285,6 +294,7 @@
 				3447EA2A1F95D5E800862A8C /* ic_text_register_wrong.png in Resources */,
 				34645DB31F8DF212007B0EED /* button_next.png in Resources */,
 				34C9A49F1F9469CA002791EE /* ic_forward2.png in Resources */,
+				347DF2531F99EE2300435F41 /* lesson_done_2.png in Resources */,
 				347DAB241F8CB820008DC894 /* ic_background_spinner.png in Resources */,
 				34C9A4A81F94858E002791EE /* cellForTableLanguage.xib in Resources */,
 				34C9A4A11F946D4D002791EE /* ic_forward.png in Resources */,
@@ -306,6 +316,7 @@
 			files = (
 				3447EA1C1F95999A00862A8C /* registration.swift in Sources */,
 				347DF24B1F99A25800435F41 /* cell2.swift in Sources */,
+				347DF24F1F99DD8100435F41 /* lessionViewController.swift in Sources */,
 				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
 				3488FDB21F98784700A89D43 /* homeController.swift in Sources */,
 				34C9A4A71F94858E002791EE /* cellForTableLanguage.swift in Sources */,
@@ -317,6 +328,7 @@
 				347DF2491F99A24800435F41 /* cell1.swift in Sources */,
 				3447EA301F95E96300862A8C /* test002.swift in Sources */,
 				3447EA321F960D1900862A8C /* registration2.swift in Sources */,
+				347DF2511F99E61F00435F41 /* cellTips.swift in Sources */,
 				3488FDAC1F985D1500A89D43 /* mainTabBarController.swift in Sources */,
 				347DAB071F8CB2AE008DC894 /* AppDelegate.swift in Sources */,
 			);

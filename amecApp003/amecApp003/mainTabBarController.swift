@@ -12,35 +12,22 @@ class mainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
-    // chieu cao navigation bar
-    //self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
-    //navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xF8F8F8, a: 1)
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
          let bien2 = tabBar.frame.size.height
         UserDefaults.standard.set(bien2, forKey: "heigh")
-        
         tabBar.backgroundColor = UIColor.white
         tabBar.tintColor = UIColor.red
-       
-        
-       //tabBar.frame.size.height = bien2
+
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-      //  let bien = tabBar.frame
-       // tabBar.frame = CGRect(x: bien.origin.x, y: bien.origin.y - 20, width: bien.size.width, height: bien.size.height + 20)
-        
-    
-        
+      
     }
   }

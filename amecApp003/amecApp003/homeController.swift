@@ -28,38 +28,25 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
     let _space : CGFloat = 25
     var _heighBtn : CGFloat = 0
     var _heighV3 : CGFloat = 200
-    let _spaceLeft : CGFloat = 20
+    let _spaceLeft : CGFloat = 12
     var _rowSelected : Int = 200
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _table.delegate = self
         _table.dataSource = self
         _table.separatorStyle = .none
-        
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        // chieu cao navigation bar
-       // self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: (41/442)*view.bounds.height)
+       // navigationbar color
         navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xF8F8F8, a: 1)
-
         setupAds()
         setupForViewContainer()
         setupForTable()
     }
-    
-    
-    
     
     func setupAds(){
         let request = GADRequest()
@@ -71,12 +58,12 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
         _viewAds.delegate = self
         _viewAds.load(request)
         
-        _viewAds.translatesAutoresizingMaskIntoConstraints = false
-        _viewAds.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        _viewAds.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        //_viewAds.translatesAutoresizingMaskIntoConstraints = false
+        //_viewAds.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        //_viewAds.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
        // _viewAds.heightAnchor.constraint(equalToConstant: (39/646)*self.view.frame.size.height).isActive = true
-        _viewAds.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        _viewAds.topAnchor.constraint(equalTo: view.topAnchor, constant: (41/442)*view.bounds.height).isActive = true
+        //_viewAds.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        //_viewAds.topAnchor.constraint(equalTo: view.topAnchor, constant: (41/442)*view.bounds.height).isActive = true
     }
     
     func setupForTable() {
@@ -236,6 +223,11 @@ class homeController: UIViewController, GADBannerViewDelegate , UITableViewDeleg
         _rowSelected = indexPath.row
         _table.reloadData()
         
+        let lessionVC = storyboard?.instantiateViewController(withIdentifier: "lessionViewController") as! lessionViewController
+        
+       // present(lessionVC, animated: true, completion: nil)
+        
+        navigationController?.pushViewController(lessionVC, animated: true)
              
     }
     
