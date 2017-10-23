@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		343C93711F9D99E000F16D3F /* lessionViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C93701F9D99E000F16D3F /* lessionViewController2.swift */; };
+		343C93731F9DD4F300F16D3F /* aCL02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C93721F9DD4F300F16D3F /* aCL02VC.swift */; };
+		343C93751F9DD98F00F16D3F /* aTE01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C93741F9DD98F00F16D3F /* aTE01VC.swift */; };
 		3447EA1C1F95999A00862A8C /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1B1F95999A00862A8C /* registration.swift */; };
 		3447EA1F1F95A58300862A8C /* cellForAnserQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */; };
 		3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		343C93701F9D99E000F16D3F /* lessionViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lessionViewController2.swift; sourceTree = "<group>"; };
+		343C93721F9DD4F300F16D3F /* aCL02VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aCL02VC.swift; sourceTree = "<group>"; };
+		343C93741F9DD98F00F16D3F /* aTE01VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aTE01VC.swift; sourceTree = "<group>"; };
 		3447EA1B1F95999A00862A8C /* registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
 		3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellForAnserQuestion.swift; sourceTree = "<group>"; };
 		3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellForAnserQuestion.xib; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				3488FDAB1F985D1500A89D43 /* mainTabBarController.swift */,
 				347DF24E1F99DD8100435F41 /* lessionViewController.swift */,
 				343C93701F9D99E000F16D3F /* lessionViewController2.swift */,
+				343C93721F9DD4F300F16D3F /* aCL02VC.swift */,
+				343C93741F9DD98F00F16D3F /* aTE01VC.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 				3447EA1C1F95999A00862A8C /* registration.swift in Sources */,
 				347DF24B1F99A25800435F41 /* cell2.swift in Sources */,
 				347DF24F1F99DD8100435F41 /* lessionViewController.swift in Sources */,
+				343C93731F9DD4F300F16D3F /* aCL02VC.swift in Sources */,
+				343C93751F9DD98F00F16D3F /* aTE01VC.swift in Sources */,
 				347DAB221F8CB7A2008DC894 /* chooselanguage.swift in Sources */,
 				3488FDB21F98784700A89D43 /* homeController.swift in Sources */,
 				34C9A4A71F94858E002791EE /* cellForTableLanguage.swift in Sources */,

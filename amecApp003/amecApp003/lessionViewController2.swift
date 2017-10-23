@@ -109,7 +109,7 @@ class lessionViewController2: UIViewController  , UITableViewDelegate , UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        //cell?.backgroundColor = UIColor.red
+       
+        self.performSegue(withIdentifier: "segueaCL02", sender: nil)
     }
 }
