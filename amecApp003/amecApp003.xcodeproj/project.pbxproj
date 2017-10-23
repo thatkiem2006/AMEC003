@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343C93711F9D99E000F16D3F /* lessionViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C93701F9D99E000F16D3F /* lessionViewController2.swift */; };
 		3447EA1C1F95999A00862A8C /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1B1F95999A00862A8C /* registration.swift */; };
 		3447EA1F1F95A58300862A8C /* cellForAnserQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */; };
 		3447EA201F95A58300862A8C /* cellForAnserQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */; };
@@ -55,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343C93701F9D99E000F16D3F /* lessionViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lessionViewController2.swift; sourceTree = "<group>"; };
 		3447EA1B1F95999A00862A8C /* registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
 		3447EA1D1F95A58300862A8C /* cellForAnserQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellForAnserQuestion.swift; sourceTree = "<group>"; };
 		3447EA1E1F95A58300862A8C /* cellForAnserQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellForAnserQuestion.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				3488FDB11F98784700A89D43 /* homeController.swift */,
 				3488FDAB1F985D1500A89D43 /* mainTabBarController.swift */,
 				347DF24E1F99DD8100435F41 /* lessionViewController.swift */,
+				343C93701F9D99E000F16D3F /* lessionViewController2.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				3447EA1F1F95A58300862A8C /* cellForAnserQuestion.swift in Sources */,
 				347DAB091F8CB2AE008DC894 /* ViewController.swift in Sources */,
 				347DAB0F1F8CB2AE008DC894 /* amecApp003.xcdatamodeld in Sources */,
+				343C93711F9D99E000F16D3F /* lessionViewController2.swift in Sources */,
 				349D6ECD1F8F1FA100414B59 /* test001.swift in Sources */,
 				34645DB11F8DED1E007B0EED /* tutrial1.swift in Sources */,
 				347DF2491F99A24800435F41 /* cell1.swift in Sources */,

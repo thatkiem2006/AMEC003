@@ -92,7 +92,7 @@ class lessionViewController: UIViewController , GADBannerViewDelegate , UITableV
             cell._viewCell.backgroundColor = UIColor.white
             cell._viewCell.layer.borderWidth = 1
             cell._viewCell.layer.borderColor = UIColor.gray.cgColor
-            //cell._viewCell.dropShadow(color: .red, opacity: 1, offSet: CGSize(width: -0.1, height: 0.1), radius: 1, scale: true)
+            
             cell._viewCell.layer.shadowColor = UIColor.gray
             .cgColor
             
@@ -122,12 +122,32 @@ class lessionViewController: UIViewController , GADBannerViewDelegate , UITableV
         
         //_rowSelected = indexPath.row
         _table.reloadData()
+        self.performSegue(withIdentifier: "lessionSegue", sender: nil)
+        
+        
         
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    @IBAction func actiontest(_ sender: AnyObject) {
+        
+       // self.performSegue(withIdentifier: "lessionSegue", sender: nil)
+        
+        //let lessionVC2 = storyboard?.instantiateViewController(withIdentifier: "lessionViewController2") as! lessionViewController2
+        //navigationController?.pushViewController(lessionVC2, animated: true)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "lessionSegue" {
+            let lession2 = segue.destination as! lessionViewController2
+            lession2.title = "Hello World"
+        }
     }
     
 
@@ -160,5 +180,18 @@ extension UIView {
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
+    func setTest(){
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.gray.cgColor
+        
+        self.layer.shadowColor = UIColor.gray
+            .cgColor
+        
+        self.layer.shadowOffset  = CGSize(width: 1, height: 0) //1.75
+        self.layer.shadowRadius = 1.7
+        self.layer.shadowOpacity = 1
     }
 }
