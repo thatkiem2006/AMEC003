@@ -1555,6 +1555,9 @@
                                         <state key="normal" title="Answer">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="actionAnser:" destination="SdY-fH-S8w" eventType="touchUpInside" id="b7x-ek-GZw"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ngs-hg-jtC">
                                         <frame key="frameInset" minX="55" minY="318" width="206" height="110"/>

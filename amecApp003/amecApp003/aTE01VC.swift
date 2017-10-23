@@ -22,6 +22,8 @@ class aTE01VC: UIViewController , GADBannerViewDelegate , UITableViewDelegate , 
     
     static var bien1 : Int = 100
     var questionArray : [String] = ["That is a car.","That is a motorcycle."]
+    var btn : UIButton!
+    var view1 : UIView!
     
     
     override func viewDidLoad() {
@@ -195,6 +197,53 @@ class aTE01VC: UIViewController , GADBannerViewDelegate , UITableViewDelegate , 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (52/646)*view.bounds.height
     }
+    
+    
+    @IBAction func actionAnser(_ sender: AnyObject) {
+         btn = UIButton()
+        btn.backgroundColor = UIColor.lightGray
+        btn.alpha = 0.8
+        view.addSubview(btn)
+        btn.frame = viewCTN.frame
+        
+        view1 = UIView()
+        view1.backgroundColor = UIColor.white
+        view1.alpha = 1
+        view.addSubview(view1)
+        view1.frame = CGRect(x: 20, y: _viewAds.frame.origin.y + _viewAds.frame.height + 20, width: self.view.bounds.width - 40, height: 200)
+       
+        let img = UIImageView()
+        view1.addSubview(img)
+        img.frame = CGRect(x: view1.frame.width/2 - 25, y: 20, width: 50, height: 50)
+        img.image = UIImage(named: "face_correct")
+        
+        let title = UILabel()
+        view1.addSubview(title)
+        title.frame = CGRect(x: view1.frame.width/2 - 25, y: 20 + 60 , width: 150, height: 50)
+        title.center.x = view1.center.x
+        title.text = "Correct answer !"
+        
+        
+        let view2 = UIView()
+        view2.backgroundColor = UIColor(rgb: 0xBDD9F0, a: 1)
+        view2.alpha = 1
+        view1.addSubview(view2)
+        view2.frame = CGRect(x: 0, y: view1.frame.height - 50, width: view1.frame.width, height: 50)
+        
+        let btn2 = UIButton()
+        
+        btn2.alpha = 1
+        view2.addSubview(btn2)
+        btn2.frame = CGRect(x: view2.frame.width/2 - 10, y: view2.frame.height/2 - 10, width: 20, height: 20)
+        btn2.setImage(UIImage(named: "button_next"), for: UIControlState.normal)
+        btn2.addTarget(self, action: #selector(perform1), for: .touchUpInside)
+    }
+    
+    func perform1(){
+        btn.isHidden = true
+        view1.isHidden = true
+    }
+    
 
 
   
